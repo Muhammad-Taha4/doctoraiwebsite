@@ -1,0 +1,919 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Free medical billing audit by Cure Claim Solutions. We find $10K-$25K in hidden revenue. No obligation, absolutely free.">
+    <title>Medical Audit Service | Cure Claim Solutions</title>
+    <link rel="icon" type="image/jpeg" href="../assets/images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .page-hero {
+            position: relative;
+            background: linear-gradient(135deg, #00b894, #00cec9);
+            padding: 5rem 0 0;
+            overflow: hidden;
+        }
+
+        .page-hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, .08);
+            z-index: 1;
+        }
+
+        .page-hero-particles {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .page-hero-inner {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding-bottom: 5rem;
+            color: #fff;
+        }
+
+        .breadcrumb {
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
+            font-size: .85rem;
+            color: rgba(255, 255, 255, .85);
+            margin-bottom: 1.25rem;
+        }
+
+        .breadcrumb a {
+            color: rgba(255, 255, 255, .85);
+        }
+
+        .breadcrumb a:hover {
+            color: #fff;
+        }
+
+        .breadcrumb .sep {
+            color: rgba(255, 255, 255, .6);
+        }
+
+        .breadcrumb .current {
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .page-hero h1 {
+            color: #fff;
+            font-size: 2.7rem;
+            font-weight: 700;
+            margin-bottom: .75rem;
+            line-height: 1.2;
+        }
+
+        .page-hero .page-subtitle {
+            font-size: 1.05rem;
+            color: rgba(255, 255, 255, .9);
+            max-width: 620px;
+            margin: 0 auto;
+        }
+
+        .page-hero-wave {
+            width: 100%;
+            line-height: 0;
+        }
+
+        .page-hero-wave svg {
+            display: block;
+            width: 100%;
+            height: 5rem;
+        }
+
+        .sec-label {
+            display: block;
+            font-family: 'Poppins', sans-serif;
+            font-size: .78rem;
+            font-weight: 700;
+            color: #00b894;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: .75rem;
+        }
+
+        .sec-label.center {
+            text-align: center;
+        }
+
+        .svc-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .svc-header h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1e293b;
+        }
+
+        .svc-overview {
+            padding: 5rem 0;
+            background: #fff;
+        }
+
+        .ov-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .ov-left h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 1.25rem;
+            line-height: 1.3;
+        }
+
+        .ov-left p {
+            color: #64748b;
+            line-height: 1.85;
+            margin-bottom: 1.1rem;
+        }
+
+        .ov-cta-group {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-green {
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
+            padding: .85rem 2rem;
+            background: linear-gradient(135deg, #00b894, #00cec9);
+            color: #fff;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            font-size: .9375rem;
+            font-weight: 700;
+            transition: all .35s;
+            text-decoration: none;
+        }
+
+        .btn-green:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 28px rgba(0, 184, 148, .35);
+        }
+
+        .ov-note {
+            font-size: .82rem;
+            color: #94a3b8;
+        }
+
+        .audit-big-card {
+            background: #1e3a5f;
+            border-radius: 20px;
+            padding: 3rem 2.5rem;
+            color: #fff;
+            text-align: center;
+        }
+
+        .abl-amount {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: #00b894;
+            line-height: 1;
+            display: block;
+        }
+
+        .abl-label {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, .8);
+            margin-top: .5rem;
+            margin-bottom: 2rem;
+            display: block;
+        }
+
+        .abl-divider {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, .15);
+            margin: 0 0 2rem;
+        }
+
+        .abl-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
+            background: rgba(0, 184, 148, .15);
+            border: 1px solid rgba(0, 184, 148, .3);
+            border-radius: 50px;
+            padding: .6rem 1.5rem;
+            color: #00b894;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .abl-sub {
+            font-size: .85rem;
+            color: rgba(255, 255, 255, .65);
+        }
+
+        .svc-scope {
+            padding: 5rem 0;
+            background: #f1f5f9;
+        }
+
+        .scope-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .scope-card {
+            background: #fff;
+            border-radius: 14px;
+            padding: 2rem 1.5rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, .07);
+            transition: all .35s;
+        }
+
+        .scope-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 14px 36px rgba(0, 184, 148, .14);
+        }
+
+        .scope-icon {
+            width: 3.5rem;
+            height: 3.5rem;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #00b894, #00cec9);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 6px 16px rgba(0, 184, 148, .3);
+        }
+
+        .scope-card h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: .5rem;
+        }
+
+        .scope-card p {
+            font-size: .88rem;
+            color: #64748b;
+            line-height: 1.75;
+        }
+
+        .svc-process {
+            padding: 5rem 0;
+            background: #fff;
+        }
+
+        .steps-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            position: relative;
+        }
+
+        .steps-row::before {
+            content: '';
+            position: absolute;
+            top: 2rem;
+            left: 10%;
+            right: 10%;
+            height: 2px;
+            background: linear-gradient(90deg, #00b894, #00cec9);
+            z-index: 0;
+        }
+
+        .step-card {
+            background: #f8fffe;
+            border: 1px solid rgba(0, 184, 148, .1);
+            border-radius: 14px;
+            padding: 2rem 1.25rem;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            transition: all .35s;
+        }
+
+        .step-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 14px 36px rgba(0, 184, 148, .14);
+        }
+
+        .step-circle {
+            width: 3.5rem;
+            height: 3.5rem;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #00b894, #00cec9);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 800;
+            font-size: 1.2rem;
+            margin: 0 auto 1.25rem;
+            box-shadow: 0 6px 16px rgba(0, 184, 148, .3);
+        }
+
+        .step-card h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: .5rem;
+        }
+
+        .step-card p {
+            font-size: .88rem;
+            color: #64748b;
+            line-height: 1.7;
+        }
+
+        .svc-deliver {
+            padding: 5rem 0;
+            background: #1e3a5f;
+        }
+
+        .svc-deliver h2 {
+            color: #fff;
+            font-size: 2rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .del-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .del-card {
+            background: rgba(255, 255, 255, .07);
+            border: 1px solid rgba(255, 255, 255, .12);
+            border-radius: 16px;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            transition: all .35s;
+        }
+
+        .del-card:hover {
+            background: rgba(0, 184, 148, .1);
+            border-color: rgba(0, 184, 148, .3);
+            transform: translateY(-4px);
+        }
+
+        .del-icon {
+            font-size: 2rem;
+            color: #00b894;
+            margin-bottom: 1rem;
+        }
+
+        .del-card h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .svc-form {
+            padding: 5rem 0;
+            background: #f1f5f9;
+            text-align: center;
+        }
+
+        .svc-form h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: .75rem;
+        }
+
+        .svc-form p {
+            color: #64748b;
+            max-width: 500px;
+            margin: 0 auto 2.5rem;
+            line-height: 1.85;
+        }
+
+        .audit-form-wrap {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .audit-form-inner {
+            background: #fff;
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, .08);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .form-field {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1rem;
+            text-align: left;
+        }
+
+        .form-field label {
+            font-size: .84rem;
+            font-weight: 600;
+            color: #374151;
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: .4rem;
+        }
+
+        .form-field input,
+        .form-field select {
+            padding: .75rem 1rem;
+            border: 1.5px solid #e5e7eb;
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            font-size: .9rem;
+            color: #1e293b;
+            background: #fff;
+            transition: all .3s;
+            outline: none;
+            width: 100%;
+        }
+
+        .form-field input:focus,
+        .form-field select:focus {
+            border-color: #00b894;
+            box-shadow: 0 0 0 3px rgba(0, 184, 148, .1);
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(135deg, #00b894, #00cec9);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all .35s;
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 184, 148, .35);
+        }
+
+        .other-svc {
+            padding: 5rem 0;
+            background: #fff;
+        }
+
+        .other-svc h2 {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 3rem;
+        }
+
+        .og {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .oc {
+            border-radius: 14px;
+            border: 1.5px solid #e5e7eb;
+            padding: 2rem;
+            text-align: center;
+            transition: all .35s;
+            text-decoration: none;
+            display: block;
+        }
+
+        .oc:hover {
+            border-color: #00b894;
+            box-shadow: 0 10px 28px rgba(0, 184, 148, .12);
+            transform: translateY(-4px);
+        }
+
+        .oi {
+            width: 3.5rem;
+            height: 3.5rem;
+            border-radius: 10px;
+            background: rgba(0, 184, 148, .08);
+            color: #00b894;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            margin: 0 auto 1rem;
+        }
+
+        .oc h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: .4rem;
+        }
+
+        .oc span {
+            font-size: .85rem;
+            color: #00b894;
+            font-weight: 600;
+        }
+
+        @media(max-width:992px) {
+            .ov-inner {
+                grid-template-columns: 1fr;
+            }
+
+            .scope-grid,
+            .del-grid,
+            .og {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .steps-row {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .steps-row::before {
+                display: none;
+            }
+
+            .page-hero h1 {
+                font-size: 2rem;
+            }
+        }
+
+        @media(max-width:640px) {
+
+            .scope-grid,
+            .del-grid,
+            .og,
+            .steps-row,
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .page-hero h1 {
+                font-size: 1.7rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <div class="container top-bar-inner">
+            <div class="top-bar-left">
+                <a href="tel:+19897964434"><i class="fas fa-phone-alt"></i> +1 989 796 4434</a>
+                <a href="mailto:info@cureclaimsolutionsllc.com"><i class="fas fa-envelope"></i>
+                    info@cureclaimsolutionsllc.com</a>
+            </div>
+            <div class="top-bar-right">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="mainNavbar">
+        <div class="nav-inner">
+            <a href="../index.html" class="logo">
+                <img src="../assets/images/logo.png" alt="Cure Claim Solutions Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="#" class="active">Our Services <i class="fas fa-chevron-down"
+                            style="font-size:10px;"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="credentialing.html">Credentialing & Enrollment</a>
+                        <a href="medical-billing.html">Medical Billing Services</a>
+                        <a href="medical-audit.html">Medical Audit Service</a>
+                        <a href="claim-approval.html">Claim Approval</a>
+                        <a href="eligibility-verification.html">Eligibility Verification</a>
+                        <a href="superbill-submission.html">Super-Bill Submission</a>
+                        <a href="medical-coding.html">Medical Coding Services</a>
+                    </div>
+                </li>
+                <li><a href="../blog/billing-mistakes.html">Our Blog</a></li>
+                <li><a href="../contact.html">Contact Us</a></li>
+            </ul>
+            <div class="nav-auth">
+                <div id="auth-logged-out" style="display:flex;gap:8px;align-items:center;">
+                    <a href="../auth/login.html" class="btn-login">Login</a>
+                    <a href="../auth/signup.html" class="btn-signup">Sign Up</a>
+                </div>
+                <div id="auth-logged-in" style="display:none;">
+                    <a href="../auth/profile.html" class="btn-myaccount">
+                        <div class="avatar-circle" id="user-initial">A</div>
+                        My Account
+                    </a>
+                </div>
+                <a href="../contact.html" class="btn-cta">Talk to An Expert</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-hero">
+        <div class="page-hero-overlay"></div>
+        <div class="page-hero-particles" id="pageParticles"></div>
+        <div class="container page-hero-inner">
+            <nav class="breadcrumb"><a href="../index.html">Home</a><span class="sep"><i
+                        class="fas fa-chevron-right"></i></span><a href="#">Our Services</a><span class="sep"><i
+                        class="fas fa-chevron-right"></i></span><span class="current">Medical Audit Service</span></nav>
+            <h1>Medical Audit Service</h1>
+            <p class="page-subtitle">We typically find $10K–$25K in missed revenue annually — discovered through our
+                comprehensive practice audit</p>
+        </div>
+        <div class="page-hero-wave"><svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path
+                    d="M0,64L48,69.3C96,75,192,85,288,80C384,75,480,53,576,48C672,43,768,53,864,64C960,75,1056,85,1152,80C1248,75,1344,53,1392,42.7L1440,32L1440,120L0,120Z"
+                    fill="#ffffff" />
+            </svg></div>
+    </section>
+
+    <section class="svc-overview">
+        <div class="container ov-inner">
+            <div class="ov-left">
+                <span class="sec-label">FREE AUDIT</span>
+                <h2>Uncover Hidden Revenue In Your Practice</h2>
+                <p>Let us conduct a thorough inspection of your practice to identify and prevent potential revenue
+                    leakage. Our billing audit examines your claims history, coding patterns, denial rates, and AR aging
+                    to find exactly where money is slipping through.</p>
+                <p>This is not a generic review — it's a detailed, specialty-specific analysis performed by certified
+                    billing professionals who know exactly what to look for.</p>
+                <div class="ov-cta-group">
+                    <a href="#auditForm" class="btn-green"><i class="fas fa-search-dollar"></i> Request Free Audit</a>
+                    <span class="ov-note"><i class="fas fa-lock" style="color:#00b894;margin-right:.3rem;"></i>No
+                        obligation, completely free</span>
+                </div>
+            </div>
+            <div class="audit-big-card">
+                <span class="abl-amount">$10K–$25K</span>
+                <span class="abl-label">Average Hidden Revenue Found</span>
+                <hr class="abl-divider">
+                <div class="abl-badge"><i class="fas fa-check-circle"></i> 100% Free</div>
+                <p class="abl-sub">No Long-Term Commitment Required</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="svc-scope">
+        <div class="container">
+            <div class="svc-header"><span class="sec-label center">AUDIT SCOPE</span>
+                <h2>A Complete Revenue Cycle Review</h2>
+            </div>
+            <div class="scope-grid">
+                <div class="scope-card">
+                    <div class="scope-icon"><i class="fas fa-chart-bar"></i></div>
+                    <h3>Claims Analysis</h3>
+                    <p>Review of submitted claims for coding accuracy, completeness, and payer compliance.</p>
+                </div>
+                <div class="scope-card">
+                    <div class="scope-icon"><i class="fas fa-dollar-sign"></i></div>
+                    <h3>Denial Pattern Review</h3>
+                    <p>Identify top denial reasons and systemic billing errors across your claim history.</p>
+                </div>
+                <div class="scope-card">
+                    <div class="scope-icon"><i class="fas fa-calendar-alt"></i></div>
+                    <h3>AR Aging Report</h3>
+                    <p>Analyze receivables 30/60/90/120+ days outstanding to prioritize recovery efforts.</p>
+                </div>
+                <div class="scope-card">
+                    <div class="scope-icon"><i class="fas fa-hashtag"></i></div>
+                    <h3>Coding Accuracy Check</h3>
+                    <p>Verify ICD-10/CPT code selection and E/M level appropriateness across sample encounters.</p>
+                </div>
+                <div class="scope-card">
+                    <div class="scope-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Compliance Review</h3>
+                    <p>HIPAA and payer-specific compliance assessment across your billing processes.</p>
+                </div>
+                <div class="scope-card">
+                    <div class="scope-icon"><i class="fas fa-search-dollar"></i></div>
+                    <h3>Underpayment Detection</h3>
+                    <p>Compare paid amounts to contracted rates to identify and recover underpayments.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="svc-process">
+        <div class="container">
+            <div class="svc-header"><span class="sec-label center">HOW IT WORKS</span>
+                <h2>How Our Audit Works</h2>
+            </div>
+            <div class="steps-row">
+                <div class="step-card">
+                    <div class="step-circle">1</div>
+                    <h3>Request</h3>
+                    <p>Submit your audit request (takes 2 minutes)</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-circle">2</div>
+                    <h3>Review</h3>
+                    <p>Our team analyzes 90 days of your billing data</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-circle">3</div>
+                    <h3>Report</h3>
+                    <p>Receive detailed findings with dollar amounts identified</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-circle">4</div>
+                    <h3>Action</h3>
+                    <p>Optional: Let us fix everything we found</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="svc-deliver">
+        <div class="container">
+            <h2>Your Free Audit Deliverables</h2>
+            <div class="del-grid">
+                <div class="del-card">
+                    <div class="del-icon"><i class="fas fa-file-alt"></i></div>
+                    <h3>Detailed Revenue Leakage Report</h3>
+                </div>
+                <div class="del-card">
+                    <div class="del-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Denial Rate Benchmarking vs. Industry</h3>
+                </div>
+                <div class="del-card">
+                    <div class="del-icon"><i class="fas fa-tasks"></i></div>
+                    <h3>Actionable Improvement Recommendations</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="svc-form" id="auditForm">
+        <div class="container">
+            <span class="sec-label center">GET STARTED</span>
+            <h2>Start Your Free Audit Today</h2>
+            <p>Fill in the form below and our team will reach out within 24 hours to schedule your free audit.</p>
+            <div class="audit-form-wrap">
+                <div class="audit-form-inner">
+                    <form id="audit-form">
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="af-name">Full Name</label>
+                                <input type="text" id="af-name" placeholder="Dr. Jane Smith" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="af-phone">Phone Number</label>
+                                <input type="tel" id="af-phone" placeholder="+1 (555) 000-0000" required>
+                            </div>
+                        </div>
+                        <div class="form-field">
+                            <label for="af-email">Email Address</label>
+                            <input type="email" id="af-email" placeholder="you@yourpractice.com" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="af-specialty">Practice Specialty</label>
+                            <select id="af-specialty" required>
+                                <option value="" disabled selected>Select your specialty...</option>
+                                <option>Family Medicine</option>
+                                <option>Internal Medicine</option>
+                                <option>Cardiology</option>
+                                <option>Orthopedics</option>
+                                <option>OB/GYN</option>
+                                <option>Mental Health</option>
+                                <option>DME</option>
+                                <option>Ophthalmology</option>
+                                <option>Pediatrics</option>
+                                <option>Urgent Care</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn-submit">Request My Free Audit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="other-svc">
+        <div class="container">
+            <h2>Explore Our Other Services</h2>
+            <div class="og">
+                <a href="medical-billing.html" class="oc">
+                    <div class="oi"><i class="fas fa-file-invoice-dollar"></i></div>
+                    <h3>Medical Billing Services</h3><span>Learn More &rarr;</span>
+                </a>
+                <a href="medical-coding.html" class="oc">
+                    <div class="oi"><i class="fas fa-code"></i></div>
+                    <h3>Medical Coding Services</h3><span>Learn More &rarr;</span>
+                </a>
+                <a href="credentialing.html" class="oc">
+                    <div class="oi"><i class="fas fa-user-check"></i></div>
+                    <h3>Credentialing & Enrollment</h3><span>Learn More &rarr;</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div>
+                <a href="../index.html" class="footer-logo">
+                    <img src="../assets/images/logo.png" alt="Cure Claim Solutions Logo" style="height: 50px;">
+                </a>
+                <p class="footer-desc">We specialize in providing comprehensive medical billing services tailored to
+                    meet the unique needs of healthcare providers.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Useful Links</h4>
+                <ul>
+                    <li><a href="../about.html">About Us</a></li>
+                    <li><a href="medical-billing.html">Services</a></li>
+                    <li><a href="../contact.html">Contact Us</a></li>
+                    <li><a href="../blog/billing-mistakes.html">Our Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="medical-billing.html">Medical Billing</a></li>
+                    <li><a href="medical-coding.html">Medical Coding</a></li>
+                    <li><a href="claim-approval.html">Claim Approval</a></li>
+                    <li><a href="medical-audit.html">Medical Audit</a></li>
+                    <li><a href="eligibility-verification.html">Eligibility Verification</a></li>
+                    <li><a href="superbill-submission.html">Super-Bill Submission</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Weekly Newsletter</h4>
+                <p style="color:rgba(255,255,255,0.5);font-size:13px;line-height:1.6;">Subscribe to stay updated on the
+                    latest healthcare billing and coding news.</p>
+                <form id="newsletter-form" class="newsletter-input">
+                    <input type="email" name="email" placeholder="Your Email Address" required>
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 | Cure Claim Solutions | All rights reserved.</p>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+    <script src="../js/script.js"></script>
+
+    <!-- Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../js/supabase.js"></script>
+    <script src="../js/forms.js"></script>
+</body>
+
+</html>

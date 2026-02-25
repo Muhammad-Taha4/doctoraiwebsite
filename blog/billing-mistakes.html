@@ -1,0 +1,670 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="The 7 most common medical billing mistakes costing your practice thousands every year — and how to fix them immediately.">
+    <title>7 Billing Mistakes Costing Your Practice Thousands | Cure Claim Solutions Blog</title>
+    <link rel="icon" type="image/jpeg" href="../assets/images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .page-hero {
+            position: relative;
+            background: linear-gradient(135deg, #00b894, #00cec9);
+            padding: 5rem 0 0;
+            overflow: hidden;
+        }
+
+        .page-hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, .08);
+            z-index: 1;
+        }
+
+        .page-hero-particles {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .page-hero-inner {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding-bottom: 5rem;
+            color: #fff;
+        }
+
+        .breadcrumb {
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
+            font-size: .85rem;
+            color: rgba(255, 255, 255, .85);
+            margin-bottom: 1.25rem;
+        }
+
+        .breadcrumb a {
+            color: rgba(255, 255, 255, .85);
+        }
+
+        .breadcrumb a:hover {
+            color: #fff;
+        }
+
+        .breadcrumb .sep {
+            color: rgba(255, 255, 255, .6);
+        }
+
+        .breadcrumb .current {
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .page-hero h1 {
+            color: #fff;
+            font-size: 2.3rem;
+            font-weight: 700;
+            margin-bottom: .75rem;
+            line-height: 1.25;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .post-meta {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: .45rem;
+            color: rgba(255, 255, 255, .85);
+            font-size: .88rem;
+        }
+
+        .post-tag {
+            display: inline-block;
+            background: rgba(255, 255, 255, .2);
+            border: 1px solid rgba(255, 255, 255, .35);
+            border-radius: 50px;
+            padding: .35rem 1rem;
+            font-size: .8rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+
+        .page-hero-wave {
+            width: 100%;
+            line-height: 0;
+        }
+
+        .page-hero-wave svg {
+            display: block;
+            width: 100%;
+            height: 5rem;
+        }
+
+        .blog-layout {
+            padding: 5rem 0;
+            background: #fff;
+        }
+
+        .blog-inner {
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .blog-content h2 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin: 2.5rem 0 1rem;
+        }
+
+        .blog-content h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1e3a5f;
+            margin: 2rem 0 .75rem;
+        }
+
+        .blog-content p {
+            color: #475569;
+            line-height: 1.9;
+            margin-bottom: 1.25rem;
+        }
+
+        .blog-content a {
+            color: #00b894;
+        }
+
+        .mistake-card {
+            border-radius: 14px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid #00b894;
+            background: #f8fffe;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, .06);
+        }
+
+        .mistake-num {
+            font-family: 'Poppins', sans-serif;
+            font-size: .78rem;
+            font-weight: 700;
+            color: #00b894;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: .35rem;
+        }
+
+        .mistake-card h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin: 0 0 .6rem;
+        }
+
+        .mistake-card p {
+            color: #475569;
+            font-size: .92rem;
+            line-height: 1.8;
+            margin-bottom: .75rem;
+        }
+
+        .fix-note {
+            display: flex;
+            align-items: flex-start;
+            gap: .6rem;
+            background: rgba(0, 184, 148, .08);
+            border-radius: 8px;
+            padding: .85rem 1rem;
+        }
+
+        .fix-note i {
+            color: #00b894;
+            flex-shrink: 0;
+            margin-top: .1rem;
+        }
+
+        .fix-note span {
+            font-size: .88rem;
+            color: #374151;
+            line-height: 1.55;
+        }
+
+        .callout {
+            background: #1e3a5f;
+            border-radius: 14px;
+            padding: 2rem;
+            color: #fff;
+            text-align: center;
+            margin: 2.5rem 0;
+        }
+
+        .callout h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: .6rem;
+        }
+
+        .callout p {
+            color: rgba(255, 255, 255, .8);
+            font-size: .9rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .btn-callout {
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
+            padding: .75rem 1.75rem;
+            background: linear-gradient(135deg, #00b894, #00cec9);
+            color: #fff;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            font-size: .9rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all .35s;
+        }
+
+        .btn-callout:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 28px rgba(0, 184, 148, .4);
+        }
+
+        .sidebar-card {
+            background: #f8fafc;
+            border-radius: 14px;
+            padding: 1.75rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid #e5e7eb;
+        }
+
+        .sidebar-card h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 1rem;
+            padding-bottom: .75rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .sidebar-cta {
+            background: linear-gradient(135deg, #00b894, #00cec9);
+            border-radius: 14px;
+            padding: 2rem;
+            color: #fff;
+            text-align: center;
+        }
+
+        .sidebar-cta h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #fff;
+            border: none;
+            padding: 0;
+            margin-bottom: .75rem;
+        }
+
+        .sidebar-cta p {
+            font-size: .87rem;
+            color: rgba(255, 255, 255, .88);
+            margin-bottom: 1.25rem;
+        }
+
+        .sidebar-cta a {
+            display: block;
+            background: #fff;
+            color: #00b894;
+            border-radius: 8px;
+            padding: .7rem 1.25rem;
+            font-family: 'Poppins', sans-serif;
+            font-size: .9rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all .3s;
+        }
+
+        .sidebar-cta a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, .15);
+        }
+
+        .related-post {
+            display: flex;
+            flex-direction: column;
+            gap: .25rem;
+            padding: .75rem 0;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .related-post:last-child {
+            border-bottom: none;
+        }
+
+        .related-post a {
+            font-size: .9rem;
+            font-weight: 600;
+            color: #1e293b;
+            text-decoration: none;
+            transition: color .25s;
+            line-height: 1.4;
+        }
+
+        .related-post a:hover {
+            color: #00b894;
+        }
+
+        .related-post span {
+            font-size: .8rem;
+            color: #94a3b8;
+        }
+
+        .tag-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .5rem;
+        }
+
+        .tag {
+            font-size: .8rem;
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-radius: 50px;
+            padding: .3rem .85rem;
+            color: #64748b;
+            transition: all .3s;
+        }
+
+        .tag:hover {
+            border-color: #00b894;
+            color: #00b894;
+        }
+
+        @media(max-width:992px) {
+            .blog-inner {
+                grid-template-columns: 1fr;
+            }
+
+            .blog-sidebar {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1.5rem;
+            }
+
+            .page-hero h1 {
+                font-size: 1.9rem;
+            }
+        }
+
+        @media(max-width:640px) {
+            .blog-sidebar {
+                grid-template-columns: 1fr;
+            }
+
+            .post-meta {
+                gap: 1rem;
+            }
+
+            .page-hero h1 {
+                font-size: 1.55rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <div class="container top-bar-inner">
+            <div class="top-bar-left">
+                <a href="tel:+19897964434"><i class="fas fa-phone-alt"></i> +1 989 796 4434</a>
+                <a href="mailto:info@cureclaimsolutionsllc.com"><i class="fas fa-envelope"></i>
+                    info@cureclaimsolutionsllc.com</a>
+            </div>
+            <div class="top-bar-right">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="mainNavbar">
+        <div class="nav-inner">
+            <a href="../index.html" class="logo">
+                <img src="../assets/images/logo.png" alt="Cure Claim Solutions Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="#">Our Services <i class="fas fa-chevron-down" style="font-size:10px;"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="../services/credentialing.html">Credentialing & Enrollment</a>
+                        <a href="../services/medical-billing.html">Medical Billing Services</a>
+                        <a href="../services/medical-audit.html">Medical Audit Service</a>
+                        <a href="../services/claim-approval.html">Claim Approval</a>
+                        <a href="../services/eligibility-verification.html">Eligibility Verification</a>
+                        <a href="../services/superbill-submission.html">Super-Bill Submission</a>
+                        <a href="../services/medical-coding.html">Medical Coding Services</a>
+                    </div>
+                </li>
+                <li><a href="billing-mistakes.html" class="active">Our Blog</a></li>
+                <li><a href="../contact.html">Contact Us</a></li>
+            </ul>
+            <div class="nav-auth">
+                <div id="auth-logged-out" style="display:flex;gap:8px;align-items:center;">
+                    <a href="../auth/login.html" class="btn-login">Login</a>
+                    <a href="../auth/signup.html" class="btn-signup">Sign Up</a>
+                </div>
+                <div id="auth-logged-in" style="display:none;">
+                    <a href="../auth/profile.html" class="btn-myaccount">
+                        <div class="avatar-circle" id="user-initial">A</div>
+                        My Account
+                    </a>
+                </div>
+                <a href="../contact.html" class="btn-cta">Talk to An Expert</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-hero">
+        <div class="page-hero-overlay"></div>
+        <div class="page-hero-particles" id="pageParticles"></div>
+        <div class="container page-hero-inner">
+            <nav class="breadcrumb"><a href="../index.html">Home</a><span class="sep"><i
+                        class="fas fa-chevron-right"></i></span><a href="#">Our Blog</a><span class="sep"><i
+                        class="fas fa-chevron-right"></i></span><span class="current">Billing Mistakes</span></nav>
+            <span class="post-tag"><i class="fas fa-tag"></i> Revenue Recovery</span>
+            <h1>7 Billing Mistakes That Are Silently Costing Your Practice Thousands</h1>
+            <div class="post-meta">
+                <span class="meta-item"><i class="fas fa-user-md"></i> By Cure Claim Solutions Team</span>
+                <span class="meta-item"><i class="fas fa-calendar-alt"></i> January 15, 2024</span>
+                <span class="meta-item"><i class="fas fa-clock"></i> 8 min read</span>
+            </div>
+        </div>
+        <div class="page-hero-wave"><svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path
+                    d="M0,64L48,69.3C96,75,192,85,288,80C384,75,480,53,576,48C672,43,768,53,864,64C960,75,1056,85,1152,80C1248,75,1344,53,1392,42.7L1440,32L1440,120L0,120Z"
+                    fill="#ffffff" />
+            </svg></div>
+    </section>
+
+    <section class="blog-layout">
+        <div class="container blog-inner">
+            <article class="blog-content">
+                <p>Medical practices lose an estimated <strong>$125 billion annually</strong> to billing errors,
+                    denials, and missed charges — and most practices don't even know it's happening. The billing process
+                    is complex, and small mistakes compound over time into significant revenue loss.</p>
+                <p>We've audited hundreds of medical practices, and we see the same errors over and over again. Here are
+                    the seven most costly billing mistakes — and exactly how to fix them.</p>
+
+                <div class="mistake-card">
+                    <span class="mistake-num">Mistake #1</span>
+                    <h3>Not Verifying Patient Eligibility Before the Visit</h3>
+                    <p>The most preventable source of claim denials. When providers don't verify coverage upfront, they
+                        risk treating patients with lapsed policies, wrong plans, or no coverage at all — leading to a
+                        denied claim they must write off or chase from the patient.</p>
+                    <div class="fix-note"><i class="fas fa-lightbulb"></i><span><strong>The Fix:</strong> Verify
+                            eligibility 24–48 hours before every single appointment. Confirm active coverage, deductible
+                            status, co-pay amounts, and authorization requirements.</span></div>
+                </div>
+
+                <div class="mistake-card">
+                    <span class="mistake-num">Mistake #2</span>
+                    <h3>Incorrect or Incomplete ICD-10 Coding</h3>
+                    <p>Using outdated codes, unspecified codes when specific ones exist, or linking codes incorrectly to
+                        procedures is one of the leading causes of denials. ICD-10 has over 70,000 codes and payers
+                        require precise, current coding with full specificity.</p>
+                    <div class="fix-note"><i class="fas fa-lightbulb"></i><span><strong>The Fix:</strong> Use
+                            CPC-certified coders who specialize in your specialty and complete annual code update
+                            training. Code audits quarterly to catch patterns before payers do.</span></div>
+                </div>
+
+                <div class="mistake-card">
+                    <span class="mistake-num">Mistake #3</span>
+                    <h3>Not Appealing Denied Claims</h3>
+                    <p>Studies show that up to 65% of denied claims are never appealed — and of those that are appealed,
+                        about 50–70% are overturned in the provider's favor. Practices that don't appeal are leaving
+                        massive amounts of owed money behind.</p>
+                    <div class="fix-note"><i class="fas fa-lightbulb"></i><span><strong>The Fix:</strong> Implement a
+                            systematic denial management process. Every denial should be reviewed within 24 hours of
+                            receipt and assigned for appeal before payer deadlines.</span></div>
+                </div>
+
+                <div class="callout">
+                    <h3>🔍 Is Your Practice Making These Mistakes Right Now?</h3>
+                    <p>Our free billing audit identifies exactly where your practice is losing revenue. Most practices
+                        find $10,000–$25,000 in missed billing.</p>
+                    <a href="../contact.html" class="btn-callout"><i class="fas fa-search-dollar"></i> Get My Free
+                        Audit</a>
+                </div>
+
+                <div class="mistake-card">
+                    <span class="mistake-num">Mistake #4</span>
+                    <h3>Missing Modifiers or Using the Wrong Ones</h3>
+                    <p>CPT modifiers provide critical context about a service — whether it's bilateral, performed by a
+                        different provider, or part of a global period. Missing or incorrect modifiers result in
+                        underpayments, denials, and NCCI edit failures.</p>
+                    <div class="fix-note"><i class="fas fa-lightbulb"></i><span><strong>The Fix:</strong> Maintain a
+                            modifier guide specific to your specialty and payer mix. Review all modifier edits annually
+                            as payer policies change.</span></div>
+                </div>
+
+                <div class="mistake-card">
+                    <span class="mistake-num">Mistake #5</span>
+                    <h3>Failing to Submit Claims on Time</h3>
+                    <p>Every payer has a timely filing deadline — often 90–365 days from the date of service. Once that
+                        window closes, the claim is denied with no ability to appeal, and the revenue is permanently
+                        lost.</p>
+                    <div class="fix-note"><i class="fas fa-lightbulb"></i><span><strong>The Fix:</strong> Aim to submit
+                            all claims within 5–7 business days of service. Build a charge lag report into your weekly
+                            monitoring to catch any delays immediately.</span></div>
+                </div>
+
+                <div class="mistake-card">
+                    <span class="mistake-num">Mistake #6</span>
+                    <h3>Accepting Underpayments Without Questioning Them</h3>
+                    <p>Payers make payment mistakes too. Studies show that 7–10% of claims are paid below contracted
+                        rates. Most practices never check, and these underpayments become permanent write-offs when not
+                        pursued within the reconsideration window.</p>
+                    <div class="fix-note"><i class="fas fa-lightbulb"></i><span><strong>The Fix:</strong> Implement a
+                            payment variance report that flags any EOB payment below contracted rates. Dispute all
+                            underpayments within payer-specified timeframes.</span></div>
+                </div>
+
+                <div class="mistake-card">
+                    <span class="mistake-num">Mistake #7</span>
+                    <h3>Maintaining Poor Patient Payment Processes</h3>
+                    <p>Even after a claim is paid correctly by insurance, many practices struggle to collect the
+                        patient's portion. Unclear billing statements, no payment plan options, and delayed statements
+                        lead to uncollected balances that age into bad debt.</p>
+                    <div class="fix-note"><i class="fas fa-lightbulb"></i><span><strong>The Fix:</strong> Collect
+                            co-pays and known balances at time of service. Send patient statements within 14 days of
+                            payment posting. Offer online payment and payment plans.</span></div>
+                </div>
+
+                <h2>How Much Is Your Practice Losing?</h2>
+                <p>If your practice is experiencing even 3–4 of these issues, you're very likely losing $15,000–$50,000
+                    or more each year in recoverable revenue. The good news: every single one of these mistakes is
+                    fixable — often with process changes that take days to implement, not months.</p>
+                <p>Our free billing audit identifies exactly which of these issues are impacting your specific practice,
+                    with dollar amounts attached to each finding. There's no obligation and no cost — just a detailed
+                    roadmap to the revenue you're currently missing.</p>
+                <p><a href="../contact.html"><strong>Request your free audit today →</strong></a></p>
+            </article>
+
+            <aside class="blog-sidebar">
+                <div class="sidebar-cta">
+                    <h3>Free Billing Audit</h3>
+                    <p>Find out how much revenue your practice is missing — at no cost to you.</p>
+                    <a href="../contact.html">Request Free Audit &rarr;</a>
+                </div>
+                <div class="sidebar-card">
+                    <h3>Related Articles</h3>
+                    <div class="related-post"><a href="cash-flow.html">How to Improve Cash Flow With Better
+                            Billing</a><span>January 22, 2024</span></div>
+                    <div class="related-post"><a href="future-billing.html">The Future of Medical Billing: AI &
+                            Automation</a><span>February 1, 2024</span></div>
+                </div>
+                <div class="sidebar-card">
+                    <h3>Topics</h3>
+                    <div class="tag-cloud"><span class="tag">Denial Management</span><span class="tag">Medical
+                            Coding</span><span class="tag">Revenue Cycle</span><span class="tag">Eligibility</span><span
+                            class="tag">Cash Flow</span><span class="tag">Compliance</span></div>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div>
+                <a href="../index.html" class="footer-logo">
+                    <img src="../assets/images/logo.png" alt="Cure Claim Solutions Logo" style="height: 50px;">
+                </a>
+                <p class="footer-desc">We specialize in providing comprehensive medical billing services tailored to
+                    meet the unique needs of healthcare providers.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Useful Links</h4>
+                <ul>
+                    <li><a href="../about.html">About Us</a></li>
+                    <li><a href="../services/medical-billing.html">Services</a></li>
+                    <li><a href="../contact.html">Contact Us</a></li>
+                    <li><a href="billing-mistakes.html">Our Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="../services/medical-billing.html">Medical Billing</a></li>
+                    <li><a href="../services/medical-coding.html">Medical Coding</a></li>
+                    <li><a href="../services/claim-approval.html">Claim Approval</a></li>
+                    <li><a href="../services/medical-audit.html">Medical Audit</a></li>
+                    <li><a href="../services/eligibility-verification.html">Eligibility Verification</a></li>
+                    <li><a href="../services/superbill-submission.html">Super-Bill Submission</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Weekly Newsletter</h4>
+                <p style="color:rgba(255,255,255,0.5);font-size:13px;line-height:1.6;">Subscribe to stay updated on the
+                    latest healthcare billing and coding news.</p>
+                <form id="newsletter-form" class="newsletter-input">
+                    <input type="email" name="email" placeholder="Your Email Address" required>
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 | Cure Claim Solutions | All rights reserved.</p>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+    <script src="../js/script.js"></script>
+
+    <!-- Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../js/supabase.js"></script>
+    <script src="../js/forms.js"></script>
+</body>
+
+</html>

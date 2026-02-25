@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter – Cure Claim Solutions Admin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f1f5f9;
+            display: flex;
+            min-height: 100vh;
+            color: #1e293b
+        }
+
+        .sidebar {
+            width: 260px;
+            background: #1a2332;
+            min-height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s
+        }
+
+        .sidebar-logo {
+            padding: 1.75rem 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            display: flex;
+            align-items: center;
+            gap: 10px
+        }
+
+        .logo-icon-s {
+            width: 38px;
+            height: 38px;
+            background: linear-gradient(135deg, #00b894, #00cec9);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center
+        }
+
+        .logo-icon-s i {
+            color: #fff;
+            font-size: 1.1rem
+        }
+
+        .logo-text-s {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #fff;
+            line-height: 1.2
+        }
+
+        .logo-text-s span {
+            color: #00b894;
+            font-size: 0.75rem;
+            font-weight: 600;
+            display: block
+        }
+
+        .sidebar-nav {
+            flex: 1;
+            padding: 1rem 0
+        }
+
+        .sidebar-nav a {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 0.8rem 1.5rem;
+            color: rgba(255, 255, 255, 0.65);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.2s
+        }
+
+        .sidebar-nav a:hover {
+            background: rgba(0, 184, 148, 0.12);
+            color: #fff
+        }
+
+        .sidebar-nav a.active {
+            background: linear-gradient(90deg, rgba(0, 184, 148, 0.3), rgba(0, 184, 148, 0.1));
+            color: #00b894;
+            border-left: 3px solid #00b894
+        }
+
+        .sidebar-nav a i {
+            width: 20px;
+            text-align: center;
+        }
+
+        .sidebar-nav .nav-divider {
+            height: 1px;
+            background: rgba(255, 255, 255, 0.06);
+            margin: 0.5rem 1rem
+        }
+
+        .main {
+            margin-left: 260px;
+            flex: 1;
+            display: flex;
+            flex-direction: column
+        }
+
+        .top-header {
+            background: #fff;
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+            position: sticky;
+            top: 0;
+            z-index: 50
+        }
+
+        .top-header h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            flex: 1
+        }
+
+        .btn-export {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 0.65rem 1.25rem;
+            background: #f8fafc;
+            border: 1.5px solid #e5e7eb;
+            border-radius: 10px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: #64748b;
+            cursor: pointer;
+            transition: all 0.2s
+        }
+
+        .btn-export:hover {
+            border-color: #00b894;
+            color: #00b894
+        }
+
+        .hamburger-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #1e293b;
+            font-size: 1.2rem
+        }
+
+        .content {
+            padding: 2rem;
+            flex: 1
+        }
+
+        /* STAT CARDS */
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.25rem;
+            margin-bottom: 2rem
+        }
+
+        .stat-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            display: flex;
+            align-items: center;
+            gap: 1rem
+        }
+
+        .stat-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, #00b894, #00cec9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 1.2rem;
+            flex-shrink: 0
+        }
+
+        .stat-num {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.9rem;
+            font-weight: 700;
+            color: #1e293b;
+            line-height: 1
+        }
+
+        .stat-label {
+            font-size: 0.82rem;
+            color: #64748b;
+            margin-top: 4px
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            overflow: hidden
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse
+        }
+
+        th {
+            padding: 0.75rem 1rem;
+            text-align: left;
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            background: #f8fafc
+        }
+
+        td {
+            padding: 0.9rem 1rem;
+            font-size: 0.87rem;
+            color: #374151;
+            border-top: 1px solid #f1f5f9
+        }
+
+        tr:hover td {
+            background: #f8fafc
+        }
+
+        .badge {
+            display: inline-flex;
+            padding: 0.25rem 0.65rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600
+        }
+
+        .badge-green {
+            background: #d1fae5;
+            color: #065f46
+        }
+
+        .badge-gray {
+            background: #f1f5f9;
+            color: #64748b
+        }
+
+        .actions-cell {
+            display: flex;
+            gap: 6px
+        }
+
+        .icon-btn {
+            width: 32px;
+            height: 32px;
+            border: none;
+            border-radius: 7px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            transition: all 0.2s
+        }
+
+        .icon-btn.toggle {
+            background: #f0fdf4;
+            color: #16a34a
+        }
+
+        .icon-btn.toggle:hover {
+            background: #16a34a;
+            color: #fff
+        }
+
+        .icon-btn.del {
+            background: #fef2f2;
+            color: #dc2626
+        }
+
+        .icon-btn.del:hover {
+            background: #dc2626;
+            color: #fff
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 3rem;
+            color: #94a3b8
+        }
+
+        .empty-state i {
+            font-size: 2.5rem;
+            margin-bottom: 0.75rem;
+            display: block
+        }
+
+        @media(max-width:768px) {
+            .sidebar {
+                transform: translateX(-100%)
+            }
+
+            .sidebar.open {
+                transform: translateX(0)
+            }
+
+            .main {
+                margin-left: 0
+            }
+
+            .hamburger-btn {
+                display: block
+            }
+
+            .stats-row {
+                grid-template-columns: 1fr
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-logo">
+            <div class="logo-icon-s"><i class="fas fa-heartbeat"></i></div>
+            <div class="logo-text-s">Cure Claim<span>Admin Panel</span></div>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="dashboard.html"><i class="fas fa-chart-line"></i> Dashboard</a>
+            <a href="leads.html"><i class="fas fa-users"></i> Leads</a>
+            <a href="contacts.html"><i class="fas fa-envelope"></i> Contacts</a>
+            <a href="audits.html"><i class="fas fa-search"></i> Audit Requests</a>
+            <a href="appointments.html"><i class="fas fa-calendar"></i> Appointments</a>
+            <div class="nav-divider"></div>
+            <a href="blog.html"><i class="fas fa-blog"></i> Blog Posts</a>
+            <a href="newsletter.html" class="active"><i class="fas fa-paper-plane"></i> Newsletter</a>
+            <div class="nav-divider"></div>
+            <a href="#" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </nav>
+    </aside>
+    <div class="main">
+        <header class="top-header">
+            <button class="hamburger-btn" id="hamburgerBtn"><i class="fas fa-bars"></i></button>
+            <h1>Newsletter Subscribers</h1>
+            <button class="btn-export" id="exportBtn"><i class="fas fa-download"></i> Export CSV</button>
+        </header>
+        <div class="content">
+            <div class="stats-row">
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-users"></i></div>
+                    <div>
+                        <div class="stat-num" id="totalCount">–</div>
+                        <div class="stat-label">Total Subscribers</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-check-circle"></i></div>
+                    <div>
+                        <div class="stat-num" id="activeCount">–</div>
+                        <div class="stat-label">Active</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="background:linear-gradient(135deg,#e74c3c,#c0392b)"><i
+                            class="fas fa-user-slash"></i></div>
+                    <div>
+                        <div class="stat-num" id="inactiveCount">–</div>
+                        <div class="stat-label">Unsubscribed</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div id="tableWrap">
+                    <div class="empty-state"><i class="fas fa-spinner fa-spin"></i>
+                        <p>Loading…</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../js/supabase.js"></script>
+    <script>
+        let all = [];
+        (async () => {
+            const { data: { session } } = await supabaseClient.auth.getSession();
+            if (!session) { window.location.href = 'login.html'; return; }
+            document.getElementById('logoutBtn').addEventListener('click', async () => { await supabaseClient.auth.signOut(); window.location.href = 'login.html'; });
+            document.getElementById('hamburgerBtn').addEventListener('click', () => document.getElementById('sidebar').classList.toggle('open'));
+            document.getElementById('exportBtn').addEventListener('click', exportCSV);
+            await load();
+        })();
+        async function load() {
+            const { data } = await supabaseClient.from('newsletter_subscribers').select('*').order('created_at', { ascending: false });
+            all = data || [];
+            const total = all.length;
+            const active = all.filter(s => s.status !== 'inactive').length;
+            document.getElementById('totalCount').textContent = total;
+            document.getElementById('activeCount').textContent = active;
+            document.getElementById('inactiveCount').textContent = total - active;
+            render();
+        }
+        function render() {
+            const w = document.getElementById('tableWrap');
+            if (!all.length) { w.innerHTML = '<div class="empty-state"><i class="fas fa-envelope"></i><p>No subscribers yet</p></div>'; return; }
+            w.innerHTML = `<table><thead><tr><th>Email</th><th>Status</th><th>Subscribed</th><th>Actions</th></tr></thead><tbody>${all.map(s => `<tr>
+        <td>${s.email}</td>
+        <td><span class="badge ${s.status === 'inactive' ? 'badge-gray' : 'badge-green'}">${s.status === 'inactive' ? 'Unsubscribed' : 'Active'}</span></td>
+        <td>${new Date(s.created_at).toLocaleDateString()}</td>
+        <td><div class="actions-cell">
+            <button class="icon-btn toggle" title="${s.status === 'inactive' ? 'Re-activate' : 'Deactivate'}" onclick="toggleSub('${s.id}','${s.status}')">
+                <i class="fas ${s.status === 'inactive' ? 'fa-user-check' : 'fa-user-slash'}"></i>
+            </button>
+            <button class="icon-btn del" onclick="del('${s.id}')"><i class="fas fa-trash"></i></button>
+        </div></td>
+    </tr>`).join('')}</tbody></table>`;
+        }
+        async function toggleSub(id, current) {
+            const next = current === 'inactive' ? 'active' : 'inactive';
+            await supabaseClient.from('newsletter_subscribers').update({ status: next }).eq('id', id); await load();
+        }
+        async function del(id) { if (!confirm('Remove this subscriber?')) return; await supabaseClient.from('newsletter_subscribers').delete().eq('id', id); await load(); }
+        function exportCSV() {
+            const rows = ['email,status,subscribed_date', ...all.map(s => `"${s.email}","${s.status || 'active'}","${new Date(s.created_at).toLocaleDateString()}"`)];
+            const blob = new Blob([rows.join('\n')], { type: 'text/csv' });
+            const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'newsletter_subscribers.csv'; a.click();
+        }
+    </script>
+</body>
+
+</html>

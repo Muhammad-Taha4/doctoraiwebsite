@@ -1,0 +1,711 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="AI, automation, and the future of medical billing — what every healthcare provider needs to know to stay ahead in the evolving revenue cycle landscape.">
+    <title>The Future of Medical Billing: AI, Automation &amp; What's Next | Cure Claim Solutions Blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .page-hero {
+            position: relative;
+            background: linear-gradient(135deg, #00b894, #00cec9);
+            padding: 5rem 0 0;
+            overflow: hidden;
+        }
+
+        .page-hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, .08);
+            z-index: 1;
+        }
+
+        .page-hero-particles {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .page-hero-inner {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding-bottom: 5rem;
+            color: #fff;
+        }
+
+        .breadcrumb {
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
+            font-size: .85rem;
+            color: rgba(255, 255, 255, .85);
+            margin-bottom: 1.25rem;
+        }
+
+        .breadcrumb a {
+            color: rgba(255, 255, 255, .85);
+        }
+
+        .breadcrumb .sep {
+            color: rgba(255, 255, 255, .6);
+        }
+
+        .breadcrumb .current {
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .page-hero h1 {
+            color: #fff;
+            font-size: 2.3rem;
+            font-weight: 700;
+            margin-bottom: .75rem;
+            line-height: 1.25;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .post-meta {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: .45rem;
+            color: rgba(255, 255, 255, .85);
+            font-size: .88rem;
+        }
+
+        .post-tag {
+            display: inline-block;
+            background: rgba(255, 255, 255, .2);
+            border: 1px solid rgba(255, 255, 255, .35);
+            border-radius: 50px;
+            padding: .35rem 1rem;
+            font-size: .8rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+
+        .page-hero-wave {
+            width: 100%;
+            line-height: 0;
+        }
+
+        .page-hero-wave svg {
+            display: block;
+            width: 100%;
+            height: 5rem;
+        }
+
+        .blog-layout {
+            padding: 5rem 0;
+            background: #fff;
+        }
+
+        .blog-inner {
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .blog-content h2 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin: 2.5rem 0 1rem;
+        }
+
+        .blog-content h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1e3a5f;
+            margin: 2rem 0 .75rem;
+        }
+
+        .blog-content p {
+            color: #475569;
+            line-height: 1.9;
+            margin-bottom: 1.25rem;
+        }
+
+        .blog-content a {
+            color: #00b894;
+        }
+
+        .trend-card {
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            border: 1.5px solid #e5e7eb;
+            background: #fff;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, .06);
+            transition: all .35s;
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+        }
+
+        .trend-card:hover {
+            border-color: #00b894;
+            box-shadow: 0 10px 32px rgba(0, 184, 148, .12);
+            transform: translateY(-3px);
+        }
+
+        .trend-icon {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #00b894, #00cec9);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+            box-shadow: 0 4px 12px rgba(0, 184, 148, .3);
+        }
+
+        .trend-body h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin: 0 0 .5rem;
+        }
+
+        .trend-body p {
+            font-size: .9rem;
+            color: #475569;
+            line-height: 1.8;
+            margin: 0;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 2.5rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: .75rem;
+            top: .5rem;
+            bottom: .5rem;
+            width: 2px;
+            background: linear-gradient(180deg, #00b894, #00cec9);
+        }
+
+        .tl-item {
+            position: relative;
+            margin-bottom: 1.5rem;
+        }
+
+        .tl-dot {
+            width: 1.25rem;
+            height: 1.25rem;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #00b894, #00cec9);
+            position: absolute;
+            left: -2.1rem;
+            top: .25rem;
+            box-shadow: 0 0 0 3px rgba(0, 184, 148, .2);
+        }
+
+        .tl-year {
+            font-family: 'Poppins', sans-serif;
+            font-size: .78rem;
+            font-weight: 700;
+            color: #00b894;
+            letter-spacing: 1px;
+            display: block;
+            margin-bottom: .2rem;
+        }
+
+        .tl-item h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin: 0 0 .4rem;
+        }
+
+        .tl-item p {
+            font-size: .88rem;
+            color: #64748b;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        .callout {
+            background: #1e3a5f;
+            border-radius: 14px;
+            padding: 2rem;
+            color: #fff;
+            text-align: center;
+            margin: 2.5rem 0;
+        }
+
+        .callout h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: .6rem;
+        }
+
+        .callout p {
+            color: rgba(255, 255, 255, .8);
+            font-size: .9rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .btn-callout {
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
+            padding: .75rem 1.75rem;
+            background: linear-gradient(135deg, #00b894, #00cec9);
+            color: #fff;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            font-size: .9rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all .35s;
+        }
+
+        .btn-callout:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 28px rgba(0, 184, 148, .4);
+        }
+
+        .sidebar-card {
+            background: #f8fafc;
+            border-radius: 14px;
+            padding: 1.75rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid #e5e7eb;
+        }
+
+        .sidebar-card h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 1rem;
+            padding-bottom: .75rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .sidebar-cta {
+            background: linear-gradient(135deg, #00b894, #00cec9);
+            border-radius: 14px;
+            padding: 2rem;
+            color: #fff;
+            text-align: center;
+        }
+
+        .sidebar-cta h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #fff;
+            border: none;
+            padding: 0;
+            margin-bottom: .75rem;
+        }
+
+        .sidebar-cta p {
+            font-size: .87rem;
+            color: rgba(255, 255, 255, .88);
+            margin-bottom: 1.25rem;
+        }
+
+        .sidebar-cta a {
+            display: block;
+            background: #fff;
+            color: #00b894;
+            border-radius: 8px;
+            padding: .7rem 1.25rem;
+            font-family: 'Poppins', sans-serif;
+            font-size: .9rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all .3s;
+        }
+
+        .sidebar-cta a:hover {
+            transform: translateY(-2px);
+        }
+
+        .related-post {
+            display: flex;
+            flex-direction: column;
+            gap: .25rem;
+            padding: .75rem 0;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .related-post:last-child {
+            border-bottom: none;
+        }
+
+        .related-post a {
+            font-size: .9rem;
+            font-weight: 600;
+            color: #1e293b;
+            text-decoration: none;
+            transition: color .25s;
+            line-height: 1.4;
+        }
+
+        .related-post a:hover {
+            color: #00b894;
+        }
+
+        .related-post span {
+            font-size: .8rem;
+            color: #94a3b8;
+        }
+
+        .tag-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .5rem;
+        }
+
+        .tag {
+            font-size: .8rem;
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-radius: 50px;
+            padding: .3rem .85rem;
+            color: #64748b;
+            transition: all .3s;
+        }
+
+        @media(max-width:992px) {
+            .blog-inner {
+                grid-template-columns: 1fr;
+            }
+
+            .blog-sidebar {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1.5rem;
+            }
+
+            .trend-card {
+                flex-direction: column;
+            }
+
+            .page-hero h1 {
+                font-size: 1.9rem;
+            }
+        }
+
+        @media(max-width:640px) {
+            .blog-sidebar {
+                grid-template-columns: 1fr;
+            }
+
+            .page-hero h1 {
+                font-size: 1.55rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top-bar" style="background:#1a2332;">
+        <div class="container top-bar-inner">
+            <div class="top-bar-left"><a href="tel:+19897964434"><i class="fas fa-phone-alt"></i> +1 989 796 4434</a><a
+                    href="mailto:info@cureclaimsolutionsllc.com"><i class="fas fa-envelope"></i>
+                    info@cureclaimsolutionsllc.com</a></div>
+            <div class="top-bar-right"><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a><a
+                    href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a><a href="#" aria-label="LinkedIn"><i
+                        class="fab fa-linkedin-in"></i></a><a href="#" aria-label="Instagram"><i
+                        class="fab fa-instagram"></i></a></div>
+        </div>
+    </div>
+    <header class="navbar" id="navbar">
+        <div class="container nav-inner">
+            <a href="../index.html" class="logo"><span class="logo-icon"><i class="fas fa-heartbeat"></i></span><span
+                    class="logo-text">Cure Claim<span>Solutions</span></span></a>
+            <nav class="nav-links" id="navLinks">
+                <a href="../index.html">Home</a><a href="../about.html">About Us</a>
+                <div class="dropdown"><a href="#" class="dropdown-toggle">Our Services <i
+                            class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu"><a href="../services/credentialing.html">Credentialing &amp;
+                            Enrollment</a><a href="../services/medical-billing.html">Medical Billing Services</a><a
+                            href="../services/medical-audit.html">Medical Audit Service</a><a
+                            href="../services/claim-approval.html">Claim Approval</a><a
+                            href="../services/eligibility-verification.html">Eligibility Verification</a><a
+                            href="../services/superbill-submission.html">Super-Bill Submission</a><a
+                            href="../services/medical-coding.html">Medical Coding Services</a></div>
+                </div>
+                <a href="billing-mistakes.html" class="active">Our Blog</a><a href="../contact.html">Contact Us</a>
+            </nav>
+            <!-- Auth Nav Buttons -->
+            <div class="nav-auth-btns" id="navAuthBtns" style="display:flex;align-items:center;gap:8px">
+                <a href="../auth/login.html" id="navLoginBtn" style="padding:0.5rem 1rem;border:1.5px solid #10b981;border-radius:8px;font-size:0.85rem;font-weight:600;color:#10b981;text-decoration:none">Login</a>
+                <a href="../auth/signup.html" id="navSignupBtn" style="padding:0.5rem 1rem;background:linear-gradient(135deg,#00b894,#10b981);border-radius:8px;font-size:0.85rem;font-weight:600;color:#fff;text-decoration:none">Sign Up</a>
+                <a href="../auth/profile.html" id="navAccountBtn" style="display:none;align-items:center;gap:7px;padding:0.5rem 1rem;background:linear-gradient(135deg,#00b894,#10b981);border-radius:8px;font-size:0.85rem;font-weight:600;color:#fff;text-decoration:none"><span id="navAvatar" style="width:26px;height:26px;border-radius:50%;background:rgba(255,255,255,0.3);display:inline-flex;align-items:center;justify-content:center;font-size:0.8rem;font-weight:700">?</span> My Account</a>
+            </div>
+            <a href="../contact.html" class="btn btn-primary nav-cta">Talk to An Expert</a>
+            <button class="hamburger" id="hamburger"
+                aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="page-hero-overlay"></div>
+        <div class="page-hero-particles" id="pageParticles"></div>
+        <div class="container page-hero-inner">
+            <nav class="breadcrumb"><a href="../index.html">Home</a><span class="sep"><i
+                        class="fas fa-chevron-right"></i></span><a href="#">Our Blog</a><span class="sep"><i
+                        class="fas fa-chevron-right"></i></span><span class="current">Future of Billing</span></nav>
+            <span class="post-tag"><i class="fas fa-tag"></i> Industry Trends</span>
+            <h1>The Future of Medical Billing: AI, Automation &amp; What's Coming Next</h1>
+            <div class="post-meta">
+                <span class="meta-item"><i class="fas fa-user-md"></i> By Cure Claim Solutions Team</span>
+                <span class="meta-item"><i class="fas fa-calendar-alt"></i> February 1, 2024</span>
+                <span class="meta-item"><i class="fas fa-clock"></i> 7 min read</span>
+            </div>
+        </div>
+        <div class="page-hero-wave"><svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path
+                    d="M0,64L48,69.3C96,75,192,85,288,80C384,75,480,53,576,48C672,43,768,53,864,64C960,75,1056,85,1152,80C1248,75,1344,53,1392,42.7L1440,32L1440,120L0,120Z"
+                    fill="#ffffff" />
+            </svg></div>
+    </section>
+
+    <section class="blog-layout">
+        <div class="container blog-inner">
+            <article class="blog-content">
+                <p>The healthcare billing industry is in the midst of a profound transformation. AI, machine learning,
+                    and automation are fundamentally changing how claims are submitted, processed, and paid — and
+                    practices that understand these trends will be positioned to capitalize on them. Those that don't
+                    risk being left behind.</p>
+                <p>Here's what's already happening, what's coming in the next few years, and what it means for your
+                    practice.</p>
+
+                <h2>The Trends Reshaping Medical Billing Today</h2>
+
+                <div class="trend-card">
+                    <div class="trend-icon"><i class="fas fa-robot"></i></div>
+                    <div class="trend-body">
+                        <h3>AI-Powered Claim Scrubbing</h3>
+                        <p>AI is already being used to review claims before submission, identifying potential denial
+                            risks in seconds. These systems cross-reference coding, payer rules, and historical denial
+                            patterns to catch errors that human reviewers miss. First-pass acceptance rates at
+                            AI-enabled billing companies are running 5–10% higher than the industry average.</p>
+                    </div>
+                </div>
+
+                <div class="trend-card">
+                    <div class="trend-icon"><i class="fas fa-brain"></i></div>
+                    <div class="trend-body">
+                        <h3>Machine Learning Denial Prediction</h3>
+                        <p>Rather than reacting to denials, ML models now predict which claims are most likely to be
+                            denied — before submission — based on payer behavior, diagnosis codes, procedure codes, and
+                            documentation patterns. This allows billers to intervene proactively and dramatically reduce
+                            denial rates.</p>
+                    </div>
+                </div>
+
+                <div class="trend-card">
+                    <div class="trend-icon"><i class="fas fa-keyboard"></i></div>
+                    <div class="trend-body">
+                        <h3>Natural Language Processing in Coding</h3>
+                        <p>NLP systems can read clinical notes and automatically suggest ICD-10 and CPT codes based on
+                            the documented encounter. While certified human coders remain essential for accuracy and
+                            compliance, NLP is reducing coding time and improving consistency — especially for
+                            high-volume practices.</p>
+                    </div>
+                </div>
+
+                <div class="trend-card">
+                    <div class="trend-icon"><i class="fas fa-exchange-alt"></i></div>
+                    <div class="trend-body">
+                        <h3>Real-Time Eligibility Verification</h3>
+                        <p>Payer APIs now offer real-time eligibility checks integrated directly into EHR systems.
+                            Instead of verifying coverage 24–48 hours before, practices can check eligibility at the
+                            moment of scheduling — and update it automatically if the patient's coverage changes before
+                            the appointment.</p>
+                    </div>
+                </div>
+
+                <div class="callout">
+                    <h3>Don't Get Left Behind the Technology Curve</h3>
+                    <p>Our billing team leverages the latest technology tools alongside expert human oversight — giving
+                        you the best of both worlds. Let us show you what's possible.</p>
+                    <a href="../contact.html" class="btn-callout"><i class="fas fa-arrow-right"></i> Talk to Our
+                        Team</a>
+                </div>
+
+                <h2>What's Coming in the Next 2–5 Years</h2>
+
+                <div class="timeline">
+                    <div class="tl-item">
+                        <div class="tl-dot"></div><span class="tl-year">2024–2025</span>
+                        <h3>Autonomous Claims Submission</h3>
+                        <p>AI systems capable of handling the complete claim submission cycle for routine encounters —
+                            code selection, claim generation, submission, and initial denial triage — with minimal human
+                            intervention.</p>
+                    </div>
+                    <div class="tl-item">
+                        <div class="tl-dot"></div><span class="tl-year">2025–2026</span>
+                        <h3>Payer Real-Time Adjudication</h3>
+                        <p>CMS and commercial payers are moving toward real-time or near-real-time claim adjudication
+                            for clean claims — eliminating the typical 14–30 day payment cycle for straightforward
+                            encounters.</p>
+                    </div>
+                    <div class="tl-item">
+                        <div class="tl-dot"></div><span class="tl-year">2026–2027</span>
+                        <h3>Patient-Facing Billing Transparency</h3>
+                        <p>Price transparency mandates and patient demand for upfront cost estimates will drive
+                            widespread adoption of cost estimator tools integrated into patient portals — before and at
+                            the time of service.</p>
+                    </div>
+                    <div class="tl-item">
+                        <div class="tl-dot"></div><span class="tl-year">2027+</span>
+                        <h3>End-to-End Revenue Cycle AI</h3>
+                        <p>Fully integrated AI platforms managing the entire revenue cycle — from scheduling through
+                            payment posting — with human experts providing oversight, exception handling, and strategic
+                            management.</p>
+                    </div>
+                </div>
+
+                <h2>What This Means For Your Practice Right Now</h2>
+                <p>The technology exists today to solve many of the billing problems that plague practices. But
+                    technology alone isn't enough — it requires experienced billing professionals who understand payer
+                    relationships, coding compliance, and the nuances of specialty-specific billing to deploy these
+                    tools effectively.</p>
+                <p>The practices that will thrive are those that pair the best technology with the best expertise.
+                    That's exactly the model we operate on at Cure Claim Solutions — and why our client practices are
+                    collecting 10–35% more revenue than industry averages.</p>
+                <p>No matter where you are in your billing operations journey, the best time to optimize is now. <a
+                        href="../contact.html"><strong>Schedule a free consultation →</strong></a></p>
+            </article>
+
+            <aside class="blog-sidebar">
+                <div class="sidebar-cta">
+                    <h3>Future-Proof Your Billing</h3>
+                    <p>Learn how our tech-enabled billing process can maximize your collections.</p>
+                    <a href="../contact.html">Free Consultation &rarr;</a>
+                </div>
+                <div class="sidebar-card">
+                    <h3>Related Articles</h3>
+                    <div class="related-post"><a href="billing-mistakes.html">7 Billing Mistakes Costing Your Practice
+                            Thousands</a><span>January 15, 2024</span></div>
+                    <div class="related-post"><a href="cash-flow.html">How to Improve Cash Flow With Better
+                            Billing</a><span>January 22, 2024</span></div>
+                </div>
+                <div class="sidebar-card">
+                    <h3>Topics</h3>
+                    <div class="tag-cloud"><span class="tag">AI in Healthcare</span><span
+                            class="tag">Automation</span><span class="tag">Future Trends</span><span class="tag">Revenue
+                            Cycle</span><span class="tag">Technology</span><span class="tag">Payer Trends</span></div>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-col footer-about">
+                <div class="footer-logo"><span class="logo-icon"><i class="fas fa-heartbeat"></i></span><span
+                        class="logo-text">Cure Claim<span>Solutions</span></span></div>
+                <p>Comprehensive medical billing services tailored to meet the unique needs of healthcare providers.</p>
+                <div class="footer-socials"><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a><a
+                        href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a><a href="#"
+                        aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a><a href="#"
+                        aria-label="Instagram"><i class="fab fa-instagram"></i></a></div>
+            </div>
+            <div class="footer-col">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li><a href="../about.html">About Us</a></li>
+                    <li><a href="../services/medical-billing.html">Services</a></li>
+                    <li><a href="../contact.html">Contact Us</a></li>
+                    <li><a href="billing-mistakes.html">Our Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Our Services</h3>
+                <ul>
+                    <li><a href="../services/medical-billing.html">Medical Billing</a></li>
+                    <li><a href="../services/medical-coding.html">Medical Coding</a></li>
+                    <li><a href="../services/claim-approval.html">Claim Approval</a></li>
+                    <li><a href="../services/medical-audit.html">Medical Audit</a></li>
+                    <li><a href="../services/eligibility-verification.html">Eligibility Verification</a></li>
+                    <li><a href="../services/superbill-submission.html">Super-Bill Submission</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Weekly Newsletter</h3>
+                <p>Stay updated on billing &amp; coding news.</p>
+                <form class="newsletter-form" id="newsletterForm"><input type="email" placeholder="Your Email Address"
+                        required><button type="submit"><i class="fas fa-paper-plane"></i></button></form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2024 | Cure Claim Solutions | All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+    <script src="../js/script.js"></script>
+    <script>(function () { var c = document.getElementById('pageParticles'); if (!c) return; for (var i = 0; i < 18; i++) { var p = document.createElement('div'); p.style.cssText = 'position:absolute;border-radius:50%;background:rgba(255,255,255,' + (Math.random() * .15 + .05) + ');width:' + (Math.random() * 5 + 3) + 'px;height:' + (Math.random() * 5 + 3) + 'px;left:' + (Math.random() * 100) + '%;animation:particleFloat ' + (Math.random() * 10 + 10) + 's ' + (Math.random() * 5) + 's infinite linear;'; c.appendChild(p); } })();</script>
+
+    <!-- Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../js/supabase.js"></script>
+    <script src="../js/forms.js"></script>
+
+    <!-- Navbar Auth State -->
+    <script>
+    (function() {
+        if (typeof supabaseClient === 'undefined') return;
+        function updateNavAuth(session) {
+            var loginBtn = document.getElementById('navLoginBtn');
+            var signupBtn = document.getElementById('navSignupBtn');
+            var accountBtn = document.getElementById('navAccountBtn');
+            var avatar = document.getElementById('navAvatar');
+            if (!loginBtn) return;
+            if (session && session.user) {
+                loginBtn.style.display = 'none';
+                signupBtn.style.display = 'none';
+                accountBtn.style.display = 'flex';
+                var name = (session.user.user_metadata && session.user.user_metadata.full_name) || session.user.email || '?';
+                var initials = name.split(' ').map(function(n){return n[0];}).join('').toUpperCase().slice(0,2) || '?';
+                if (avatar) avatar.textContent = initials;
+            } else {
+                loginBtn.style.display = '';
+                signupBtn.style.display = '';
+                accountBtn.style.display = 'none';
+            }
+        }
+        supabaseClient.auth.getSession().then(function(r){ updateNavAuth(r.data.session); });
+        supabaseClient.auth.onAuthStateChange(function(event, session){ updateNavAuth(session); });
+    })();
+    </script></body>
+
+</html>

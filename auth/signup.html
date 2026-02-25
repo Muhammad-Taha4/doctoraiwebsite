@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account | Cure Claim Solutions</title>
+    <link rel="icon" type="image/jpeg" href="../assets/images/logo.png">
+    <meta name="description"
+        content="Join 150+ medical practices using Cure Claim Solutions for expert medical billing services.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .auth-hero {
+            background: linear-gradient(135deg, #00b894, #00cec9);
+            padding: 5rem 0 8rem;
+            position: relative;
+            overflow: hidden;
+            text-align: center
+        }
+
+        .auth-hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            background: #f1f5f9;
+            clip-path: ellipse(55% 100% at 50% 100%)
+        }
+
+        .auth-hero h1 {
+            color: #fff;
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .auth-hero p {
+            color: rgba(255, 255, 255, 0.88);
+            font-size: 1rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            animation: pf 12s infinite linear
+        }
+
+        @keyframes pf {
+            0% {
+                transform: translateY(100%);
+                opacity: 0
+            }
+
+            10% {
+                opacity: 1
+            }
+
+            90% {
+                opacity: 1
+            }
+
+            100% {
+                transform: translateY(-200px);
+                opacity: 0
+            }
+        }
+
+        .auth-wrap {
+            background: #f1f5f9;
+            padding-bottom: 5rem
+        }
+
+        .auth-card {
+            background: #fff;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            padding: 2.5rem;
+            max-width: 560px;
+            margin: -4rem auto 0;
+            position: relative;
+            z-index: 10
+        }
+
+        .auth-card h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 0.3rem;
+            text-align: center
+        }
+
+        .auth-card .subtitle {
+            color: #64748b;
+            font-size: 0.9rem;
+            text-align: center;
+            margin-bottom: 2rem
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem
+        }
+
+        .form-grid .field.full {
+            grid-column: 1/-1
+        }
+
+        .field {
+            margin-bottom: 0
+        }
+
+        .field label {
+            display: block;
+            font-size: 0.83rem;
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 0.4rem
+        }
+
+        .input-wrap {
+            position: relative
+        }
+
+        .input-wrap i.icon {
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #94a3b8;
+            font-size: 0.95rem;
+            pointer-events: none
+        }
+
+        .input-wrap input,
+        .input-wrap select {
+            width: 100%;
+            padding: 0.8rem 1rem 0.8rem 2.6rem;
+            border: 1.5px solid #e5e7eb;
+            border-radius: 10px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.93rem;
+            color: #1e293b;
+            outline: none;
+            transition: all 0.2s;
+            background: #fff;
+            appearance: none
+        }
+
+        .input-wrap input:focus,
+        .input-wrap select:focus {
+            border-color: #00b894;
+            box-shadow: 0 0 0 3px rgba(0, 184, 148, 0.12)
+        }
+
+        .toggle-pw {
+            position: absolute;
+            right: 13px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #94a3b8;
+            cursor: pointer;
+            font-size: 0.95rem
+        }
+
+        .field-err {
+            color: #dc2626;
+            font-size: 0.78rem;
+            margin-top: 0.3rem;
+            display: none
+        }
+
+        .field-err.show {
+            display: block
+        }
+
+        .agree-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            margin: 1.2rem 0;
+            font-size: 0.87rem;
+            color: #4b5563
+        }
+
+        .agree-row input {
+            accent-color: #00b894;
+            margin-top: 2px;
+            flex-shrink: 0
+        }
+
+        .agree-row a {
+            color: #00b894;
+            font-weight: 600;
+            text-decoration: none
+        }
+
+        .agree-row a:hover {
+            text-decoration: underline
+        }
+
+        .btn-auth {
+            width: 100%;
+            padding: 0.9rem;
+            background: linear-gradient(135deg, #00b894, #00cec9);
+            color: #fff;
+            border: none;
+            border-radius: 12px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.25s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px
+        }
+
+        .btn-auth:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 184, 148, 0.35)
+        }
+
+        .btn-auth:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+            transform: none
+        }
+
+        .auth-footer {
+            text-align: center;
+            margin-top: 1.5rem;
+            font-size: 0.88rem;
+            color: #64748b
+        }
+
+        .auth-footer a {
+            color: #00b894;
+            font-weight: 600;
+            text-decoration: none
+        }
+
+        .auth-footer a:hover {
+            text-decoration: underline
+        }
+
+        .error-msg {
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+            color: #dc2626;
+            padding: 0.75rem 1rem;
+            border-radius: 9px;
+            font-size: 0.87rem;
+            margin-bottom: 1rem;
+            display: none;
+            align-items: center;
+            gap: 8px
+        }
+
+        .error-msg.show {
+            display: flex
+        }
+
+        .success-msg {
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            color: #16a34a;
+            padding: 0.75rem 1rem;
+            border-radius: 9px;
+            font-size: 0.87rem;
+            margin-bottom: 1rem;
+            display: none;
+            align-items: center;
+            gap: 8px
+        }
+
+        .success-msg.show {
+            display: flex
+        }
+
+        @media(max-width:600px) {
+            .form-grid {
+                grid-template-columns: 1fr
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <div class="container top-bar-inner">
+            <div class="top-bar-left">
+                <a href="tel:+19897964434"><i class="fas fa-phone-alt"></i> +1 989 796 4434</a>
+                <a href="mailto:info@cureclaimsolutionsllc.com"><i class="fas fa-envelope"></i>
+                    info@cureclaimsolutionsllc.com</a>
+            </div>
+            <div class="top-bar-right">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="mainNavbar">
+        <div class="nav-inner">
+            <a href="../index.html" class="logo">
+                <img src="../assets/images/logo.png" alt="Cure Claim Solutions Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="#">Our Services <i class="fas fa-chevron-down" style="font-size:10px;"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="../services/credentialing.html">Credentialing & Enrollment</a>
+                        <a href="../services/medical-billing.html">Medical Billing Services</a>
+                        <a href="../services/medical-audit.html">Medical Audit Service</a>
+                        <a href="../services/claim-approval.html">Claim Approval</a>
+                        <a href="../services/eligibility-verification.html">Eligibility Verification</a>
+                        <a href="../services/superbill-submission.html">Super-Bill Submission</a>
+                        <a href="../services/medical-coding.html">Medical Coding Services</a>
+                    </div>
+                </li>
+                <li><a href="../blog/billing-mistakes.html">Our Blog</a></li>
+                <li><a href="../contact.html">Contact Us</a></li>
+            </ul>
+            <div class="nav-auth">
+                <div id="auth-logged-out" style="display:flex;gap:8px;align-items:center;">
+                    <a href="login.html" class="btn-login">Login</a>
+                    <a href="signup.html" class="btn-signup active">Sign Up</a>
+                </div>
+                <div id="auth-logged-in" style="display:none;">
+                    <a href="profile.html" class="btn-myaccount">
+                        <div class="avatar-circle" id="user-initial">A</div>
+                        My Account
+                    </a>
+                </div>
+                <a href="../contact.html" class="btn-cta">Talk to An Expert</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <div class="auth-hero">
+        <div class="particle" style="width:8px;height:8px;left:10%;animation-delay:0s;animation-duration:10s"></div>
+        <div class="particle" style="width:5px;height:5px;left:30%;animation-delay:2s;animation-duration:14s"></div>
+        <div class="particle" style="width:6px;height:6px;left:70%;animation-delay:4s;animation-duration:11s"></div>
+        <div class="container">
+            <h1>Create Your Account</h1>
+            <p>Join 150+ practices using Cure Claim Solutions</p>
+        </div>
+    </div>
+
+    <!-- AUTH CARD -->
+    <div class="auth-wrap">
+        <div class="container">
+            <div class="auth-card">
+                <h2>Get Started Free</h2>
+                <p class="subtitle">Fill in your practice details to create your account</p>
+                <div class="error-msg" id="errorMsg"><i class="fas fa-exclamation-circle"></i><span
+                        id="errorText"></span></div>
+                <div class="success-msg" id="successMsg"><i class="fas fa-check-circle"></i><span
+                        id="successText"></span></div>
+                <form id="signupForm" novalidate>
+                    <div class="form-grid">
+                        <div class="field">
+                            <label for="fullName">Full Name *</label>
+                            <div class="input-wrap"><i class="fas fa-user icon"></i><input type="text" id="fullName"
+                                    placeholder="Dr. Jane Smith" required></div>
+                            <div class="field-err" id="nameErr">Please enter your full name</div>
+                        </div>
+                        <div class="field">
+                            <label for="signupEmail">Email Address *</label>
+                            <div class="input-wrap"><i class="fas fa-envelope icon"></i><input type="email"
+                                    id="signupEmail" placeholder="you@practice.com" required></div>
+                            <div class="field-err" id="emailErr">Please enter a valid email</div>
+                        </div>
+                        <div class="field">
+                            <label for="phone">Phone Number *</label>
+                            <div class="input-wrap"><i class="fas fa-phone icon"></i><input type="tel" id="phone"
+                                    placeholder="+1 (555) 000-0000" required></div>
+                            <div class="field-err" id="phoneErr">Phone number is required</div>
+                        </div>
+                        <div class="field">
+                            <label for="practiceName">Practice Name *</label>
+                            <div class="input-wrap"><i class="fas fa-building icon"></i><input type="text"
+                                    id="practiceName" placeholder="ABC Medical Group" required></div>
+                            <div class="field-err" id="practiceErr">Practice name is required</div>
+                        </div>
+                        <div class="field full">
+                            <label for="specialty">Specialty *</label>
+                            <div class="input-wrap"><i class="fas fa-stethoscope icon"></i>
+                                <select id="specialty" required>
+                                    <option value="">Select your specialty...</option>
+                                    <option value="Family Medicine">Family Medicine</option>
+                                    <option value="Internal Medicine">Internal Medicine</option>
+                                    <option value="OB/GYN">OB/GYN</option>
+                                    <option value="Cardiology">Cardiology</option>
+                                    <option value="Orthopedics">Orthopedics</option>
+                                    <option value="Mental Health">Mental Health</option>
+                                    <option value="DME">DME</option>
+                                    <option value="Ophthalmology">Ophthalmology</option>
+                                    <option value="Pediatrics">Pediatrics</option>
+                                    <option value="Urgent Care">Urgent Care</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div class="field-err" id="specialtyErr">Please select your specialty</div>
+                        </div>
+                        <div class="field">
+                            <label for="signupPassword">Password *</label>
+                            <div class="input-wrap"><i class="fas fa-lock icon"></i><input type="password"
+                                    id="signupPassword" placeholder="Min. 8 characters" required><button type="button"
+                                    class="toggle-pw" id="togglePw1"><i class="fas fa-eye"></i></button></div>
+                            <div class="field-err" id="pwErr">Password must be at least 8 characters</div>
+                        </div>
+                        <div class="field">
+                            <label for="confirmPassword">Confirm Password *</label>
+                            <div class="input-wrap"><i class="fas fa-lock icon"></i><input type="password"
+                                    id="confirmPassword" placeholder="Re-enter password" required><button type="button"
+                                    class="toggle-pw" id="togglePw2"><i class="fas fa-eye"></i></button></div>
+                            <div class="field-err" id="cpwErr">Passwords do not match</div>
+                        </div>
+                    </div>
+                    <div class="agree-row">
+                        <input type="checkbox" id="agreeTerms">
+                        <span>I agree to the <a href="#">Terms & Conditions</a> and <a href="#">Privacy
+                                Policy</a></span>
+                    </div>
+                    <div class="field-err" id="termsErr" style="margin-top:-0.5rem;margin-bottom:1rem">Please accept the
+                        terms to continue</div>
+                    <button type="submit" class="btn-auth" id="signupBtn"><i class="fas fa-user-plus"></i> Create
+                        Account</button>
+                </form>
+                <div class="auth-footer">Already have an account? <a href="login.html">Login</a></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div>
+                <a href="../index.html" class="footer-logo">
+                    <img src="../assets/images/logo.png" alt="Cure Claim Solutions Logo" style="height: 50px;">
+                </a>
+                <p class="footer-desc">We specialize in providing comprehensive medical billing services tailored to
+                    meet the unique needs of healthcare providers.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Useful Links</h4>
+                <ul>
+                    <li><a href="../about.html">About Us</a></li>
+                    <li><a href="../services/medical-billing.html">Services</a></li>
+                    <li><a href="../contact.html">Contact Us</a></li>
+                    <li><a href="../blog/billing-mistakes.html">Our Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="../services/medical-billing.html">Medical Billing</a></li>
+                    <li><a href="../services/medical-coding.html">Medical Coding</a></li>
+                    <li><a href="../services/claim-approval.html">Claim Approval</a></li>
+                    <li><a href="../services/medical-audit.html">Medical Audit</a></li>
+                    <li><a href="../services/eligibility-verification.html">Eligibility Verification</a></li>
+                    <li><a href="../services/superbill-submission.html">Super-Bill Submission</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Weekly Newsletter</h4>
+                <p style="color:rgba(255,255,255,0.5);font-size:13px;line-height:1.6;">Subscribe to stay updated on the
+                    latest healthcare billing and coding news.</p>
+                <form id="newsletter-form" class="newsletter-input">
+                    <input type="email" name="email" placeholder="Your Email Address" required>
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 | Cure Claim Solutions | All rights reserved.</p>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+    <script src="../js/script.js"></script>
+
+    <!-- Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../js/supabase.js"></script>
+    <script>
+        // Password toggles
+        function makeToggle(btnId, inputId) {
+            const btn = document.getElementById(btnId);
+            if (!btn) return;
+            btn.addEventListener('click', function () {
+                const inp = document.getElementById(inputId);
+                const isText = inp.type === 'text';
+                inp.type = isText ? 'password' : 'text';
+                this.innerHTML = isText ? '<i class="fas fa-eye"></i>' : '<i class="fas fa-eye-slash"></i>';
+            });
+        }
+        makeToggle('togglePw1', 'signupPassword');
+        makeToggle('togglePw2', 'confirmPassword');
+
+        function showErr(id, show) {
+            const el = document.getElementById(id);
+            if (el) el.classList[show ? 'add' : 'remove']('show');
+        }
+        function isValidEmail(e) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e); }
+
+        const signupForm = document.getElementById('signupForm');
+        if (signupForm) {
+            signupForm.addEventListener('submit', async function (e) {
+                e.preventDefault();
+                if (typeof supabaseClient === 'undefined') return;
+                const fullName = document.getElementById('fullName').value.trim();
+                const email = document.getElementById('signupEmail').value.trim();
+                const phone = document.getElementById('phone').value.trim();
+                const practiceName = document.getElementById('practiceName').value.trim();
+                const specialty = document.getElementById('specialty').value;
+                const password = document.getElementById('signupPassword').value;
+                const confirmPw = document.getElementById('confirmPassword').value;
+                const agreed = document.getElementById('agreeTerms').checked;
+                let valid = true;
+                showErr('nameErr', !fullName); if (!fullName) valid = false;
+                showErr('emailErr', !isValidEmail(email)); if (!isValidEmail(email)) valid = false;
+                showErr('phoneErr', !phone); if (!phone) valid = false;
+                showErr('practiceErr', !practiceName); if (!practiceName) valid = false;
+                showErr('specialtyErr', !specialty); if (!specialty) valid = false;
+                showErr('pwErr', password.length < 8); if (password.length < 8) valid = false;
+                showErr('cpwErr', password !== confirmPw); if (password !== confirmPw) valid = false;
+                showErr('termsErr', !agreed); if (!agreed) valid = false;
+                if (!valid) return;
+                const btn = document.getElementById('signupBtn');
+                const errDiv = document.getElementById('errorMsg');
+                const successDiv = document.getElementById('successMsg');
+                errDiv.classList.remove('show');
+                successDiv.classList.remove('show');
+                btn.disabled = true;
+                btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Creating Account...';
+                const { data, error } = await supabaseClient.auth.signUp({
+                    email, password,
+                    options: { data: { full_name: fullName, phone, practice_name: practiceName, specialty } }
+                });
+                if (error) {
+                    document.getElementById('errorText').textContent = error.message;
+                    errDiv.classList.add('show');
+                    btn.disabled = false;
+                    btn.innerHTML = '<i class="fas fa-user-plus"></i> Create Account';
+                    return;
+                }
+                // Insert into leads table
+                try {
+                    await supabaseClient.from('leads').insert([{ full_name: fullName, email, phone, specialty, service: 'Signup', source: 'signup', status: 'new' }]);
+                } catch (err) { console.warn('Could not insert lead:', err); }
+                document.getElementById('successText').textContent = 'Account created! Please check your email to verify your account, then login.';
+                successDiv.classList.add('show');
+                btn.innerHTML = '<i class="fas fa-check"></i> Account Created!';
+                this.reset();
+                setTimeout(() => { window.location.href = 'login.html'; }, 3000);
+            });
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,629 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Expert medical billing services that increase collections by 7-15% in 90 days. Free billing audit, HIPAA compliant, certified coders.">
+    <meta name="keywords"
+        content="medical billing services, healthcare billing, claim denial management, medical coding, revenue cycle management, HIPAA compliant">
+    <meta name="author" content="Cure Claim Solutions LLC">
+    <title>Medical Billing Services | Boost Collections 7-15% | Cure Claim Solutions</title>
+    <link rel="icon" type="image/jpeg" href="assets/images/logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- AOS Library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Swiper.js -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- SCROLL PROGRESS BAR -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <div class="top-bar-inner">
+            <div class="top-bar-left">
+                <a href="tel:+19897964434" style="color:#ffffff;">
+                    <i class="fas fa-phone-alt" style="color:#25D366;"></i>
+                    +1 989 796 4434
+                </a>
+                <a href="mailto:info@cureclaimsolutionsllc.com" style="color:#ffffff;">
+                    <i class="fas fa-envelope" style="color:#EA4335;"></i>
+                    info@cureclaimsolutionsllc.com
+                </a>
+            </div>
+            <div class="top-bar-right">
+                <a href="#"><i class="fab fa-twitter" style="color:#1DA1F2;"></i></a>
+                <a href="#"><i class="fab fa-facebook-f" style="color:#1877F2;"></i></a>
+                <a href="#"><i class="fab fa-youtube" style="color:#FF0000;"></i></a>
+                <a href="#"><i class="fab fa-pinterest" style="color:#E60023;"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="mainNavbar">
+        <div class="nav-inner">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.png" alt="Cure Claim Solutions Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="#">Our Services <i class="fas fa-chevron-down" style="font-size:10px;"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="services/credentialing.html">Credentialing &amp; Enrollment</a>
+                        <a href="services/medical-billing.html">Medical Billing Services</a>
+                        <a href="services/medical-audit.html">Medical Audit Service</a>
+                        <a href="services/claim-approval.html">Claim Approval</a>
+                        <a href="services/eligibility-verification.html">Eligibility Verification</a>
+                        <a href="services/superbill-submission.html">Super-Bill Submission</a>
+                        <a href="services/medical-coding.html">Medical Coding Services</a>
+                    </div>
+                </li>
+                <li><a href="blog/billing-mistakes.html">Our Blog</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <div class="nav-auth">
+                <div id="auth-logged-out" style="display:flex;gap:8px;align-items:center;">
+                    <a href="auth/login.html" class="btn-login">Login</a>
+                    <a href="auth/signup.html" class="btn-signup">Sign Up</a>
+                </div>
+                <div id="auth-logged-in" style="display:none;">
+                    <a href="auth/profile.html" class="btn-myaccount">
+                        <div class="avatar-circle" id="user-initial">A</div>
+                        My Account
+                    </a>
+                </div>
+                <a href="contact.html" class="btn-cta">Talk to An Expert</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+        <div class="hero-inner">
+            <div class="hero-content" data-aos="fade-right">
+                <div class="hero-badge">
+                    <i class="fas fa-star"></i>
+                    WELCOME TO CURE CLAIM SOLUTIONS
+                </div>
+                <h1>Boost Your Collections by 7-15% in Just 90 Days</h1>
+                <p>We specialize in providing comprehensive medical billing services tailored to meet the unique needs
+                    of healthcare providers across the nation.</p>
+                <div class="hero-tags">
+                    <div class="hero-tag"><i class="fas fa-check-circle"></i> HIPAA Compliant</div>
+                    <div class="hero-tag"><i class="fas fa-check-circle"></i> U.S. Based Team</div>
+                    <div class="hero-tag"><i class="fas fa-check-circle"></i> Certified Coders</div>
+                    <div class="hero-tag"><i class="fas fa-check-circle"></i> Free Audit Available</div>
+                </div>
+                <div class="hero-btns">
+                    <a href="contact.html" class="btn-hero-primary">Get Free Billing Audit</a>
+                    <a href="contact.html" class="btn-hero-outline">Talk to An Expert</a>
+                </div>
+            </div>
+            <div class="hero-image-card" data-aos="fade-left">
+                <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&q=80"
+                    alt="Medical Billing Professional" class="section-image"
+                    style="width:100%; border-radius:24px; object-fit:cover;">
+                <div class="hero-image-label" style="color: var(--dark);">Medical Billing Experts</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TICKER -->
+    <div class="ticker">
+        <div class="ticker-inner">
+            <div class="ticker-item"><span>★</span> SKILLED BILLERS</div>
+            <div class="ticker-item"><span>★</span> HIPAA COMPLIANT</div>
+            <div class="ticker-item"><span>★</span> CERTIFIED CODERS</div>
+            <div class="ticker-item"><span>★</span> U.S. BASED TEAM</div>
+            <div class="ticker-item"><span>★</span> FREE AUDIT AVAILABLE</div>
+            <div class="ticker-item"><span>★</span> 150+ HAPPY CLIENTS</div>
+            <div class="ticker-item"><span>★</span> SKILLED BILLERS</div>
+            <div class="ticker-item"><span>★</span> HIPAA COMPLIANT</div>
+            <div class="ticker-item"><span>★</span> CERTIFIED CODERS</div>
+            <div class="ticker-item"><span>★</span> U.S. BASED TEAM</div>
+            <div class="ticker-item"><span>★</span> FREE AUDIT AVAILABLE</div>
+            <div class="ticker-item"><span>★</span> 150+ HAPPY CLIENTS</div>
+        </div>
+    </div>
+
+    <!-- FEATURES -->
+    <section class="features" data-aos="fade-up">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="feature-icon"><i class="fas fa-clock"></i></div>
+                    <h3>Save Hours Every Day</h3>
+                    <p>Our team handles claim submissions, denials, and follow-ups. Your staff gets hours back daily to
+                        focus on patient care.</p>
+                </div>
+                <div class="feature-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Increase Your Collections</h3>
+                    <p>By catching missed charges and reworking denied claims, our clients see 7-15% more collections
+                        within 90 days.</p>
+                </div>
+                <div class="feature-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Stay Audit-Safe</h3>
+                    <p>We stay on top of all regulations and HIPAA requirements. You won't have to worry about audits or
+                        coding errors.</p>
+                </div>
+                <div class="feature-card" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="feature-icon"><i class="fas fa-award"></i></div>
+                    <h3>Expert Certified Coders</h3>
+                    <p>Our team of seasoned professionals brings unparalleled expertise to ensure your billing is
+                        handled with utmost accuracy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" data-aos="fade-up">
+        <div class="container">
+            <div class="about-inner">
+                <div class="about-image-wrap" data-aos="fade-right">
+                    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=500&q=80" alt="Medical Team"
+                        class="section-image" style="width:100%; height:450px; object-fit:cover; border-radius:24px;">
+                    <div class="about-badge">
+                        <strong class="stat-num" data-count="10">0</strong>
+                        <span>Years Experience</span>
+                    </div>
+                </div>
+                <div class="about-content" data-aos="fade-left">
+                    <div class="section-label">ABOUT CURE CLAIMS</div>
+                    <h2>Experience Top-Tier Service with Our Expert Medical Billing Professionals</h2>
+                    <p>At Cure Claim Solutions, we specialize in providing comprehensive medical billing services
+                        tailored to meet the unique needs of healthcare providers. With a team of experienced
+                        professionals, we ensure accurate, efficient, and compliant billing practices.</p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <div><strong>U.S. Based Team &amp; Certified Coders</strong><span>CPC, CCS, and RHIT
+                                    certified professionals</span></div>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <div><strong>HIPAA Compliant &amp; Secure</strong><span>100% compliance and data
+                                    protection</span></div>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <div><strong>No Long-Term Contracts</strong><span>Cancel anytime with no hassles</span>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <div><strong>Dedicated Account Manager</strong><span>Personal point of contact for your
+                                    practice</span></div>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <div><strong>Real-Time Reporting</strong><span>24/7 access via our secure portal</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="about.html" class="learn-more">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONSULTATION FORM -->
+    <section class="consultation" data-aos="fade-up">
+        <div class="container">
+            <div class="form-card">
+                <h3>Request a Consultation</h3>
+                <form id="consultation-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" name="full_name" placeholder="Dr. John Smith" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Phone No.</label>
+                            <input type="tel" name="phone" placeholder="+1 (555) 000-0000" required>
+                        </div>
+                    </div>
+                    <div class="form-group" style="margin-bottom:16px;">
+                        <label>Service Interested In</label>
+                        <select name="service_interested">
+                            <option value="">Select a Service</option>
+                            <option>Medical Billing</option>
+                            <option>Claim Approval</option>
+                            <option>Medical Coding</option>
+                            <option>Medical Audit</option>
+                            <option>Eligibility Verification</option>
+                            <option>Super-Bill Submission</option>
+                            <option>Credentialing &amp; Enrollment</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-submit">Submit Now</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- WORKING PROCESS -->
+    <section class="process" data-aos="fade-up">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">WORKING PROCESS</div>
+                <h2>We Provide All Aspects Of Medical Practice</h2>
+            </div>
+            <div class="process-grid">
+                <div class="process-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="process-num"><i class="fas fa-user-plus"></i></div>
+                    <h4>Patient Registration</h4>
+                    <p>Complete the patient information form. We ensure all necessary details are accurately captured
+                        for smooth processing.</p>
+                </div>
+                <div class="process-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="process-num"><i class="fas fa-check-double"></i></div>
+                    <h4>Insurance Verification</h4>
+                    <p>We verify the patient's insurance coverage and benefits, ensuring eligibility and identifying any
+                        co-pays or deductibles.</p>
+                </div>
+                <div class="process-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="process-num"><i class="fas fa-dollar-sign"></i></div>
+                    <h4>Payment Posting</h4>
+                    <p>We meticulously post payments received from insurance companies and patients, reconciling
+                        accounts to ensure accuracy.</p>
+                </div>
+                <div class="process-card" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="process-num"><i class="fas fa-chart-bar"></i></div>
+                    <h4>Reporting and Analysis</h4>
+                    <p>Receive detailed reports and analyses, providing insights into your practice's financial
+                        performance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services" data-aos="fade-up">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">WHAT WE DO</div>
+                <h2>Comprehensive Billing Solutions</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="service-icon"><i class="fas fa-file-medical"></i></div>
+                    <h3>Medical Billing Services</h3>
+                    <p>Our expert team offers complete medical billing services, handling check-in/check-out, claims,
+                        payments, and denials for healthcare providers.</p>
+                    <a href="services/medical-billing.html">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="service-icon"><i class="fas fa-clipboard-check"></i></div>
+                    <h3>Claim Approval &amp; Denial Management</h3>
+                    <p>Our coders advocate for healthcare providers, ensuring claims are approved and helping get denied
+                        claims paid. We reduce denials by 30-50%.</p>
+                    <a href="services/claim-approval.html">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="service-icon"><i class="fas fa-code"></i></div>
+                    <h3>Medical Coding Services</h3>
+                    <p>Clinical coding officers convert patient services into ICD-10 and CPT codes, creating a clean
+                        super-bill for submission to the insurance payer.</p>
+                    <a href="services/medical-coding.html">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="service-icon"><i class="fas fa-search-dollar"></i></div>
+                    <h3>Medical Audit Service</h3>
+                    <p>Let us conduct a thorough inspection of your practice to identify and prevent potential revenue
+                        leakage. We typically find $10K-$25K in missed revenue.</p>
+                    <a href="services/medical-audit.html">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="service-icon"><i class="fas fa-file-invoice"></i></div>
+                    <h3>Super-Bill Submission</h3>
+                    <p>Our coders collaborate with the billing team to generate a super-bill that details charges,
+                        patient insurance coverage, and any co-payments.</p>
+                    <a href="services/superbill-submission.html">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="service-icon"><i class="fas fa-id-card"></i></div>
+                    <h3>Eligibility Verification</h3>
+                    <p>Verifying patient insurance eligibility is the crucial first step in billing, requiring precise
+                        and timely collection of all necessary information.</p>
+                    <a href="services/eligibility-verification.html">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="why" data-aos="fade-up">
+        <div class="container">
+            <div class="why-inner">
+                <div class="why-left">
+                    <div class="section-label">WHY CHOOSE US</div>
+                    <h2>We Offer Premier Medical Billing Services</h2>
+                    <p>We combine advanced technology with human expertise to deliver the best results for your
+                        practice. Our numbers speak for themselves.</p>
+                    <div class="stats-grid">
+                        <div class="stat-card" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="stat-num" data-count="15">0<span>%</span></div>
+                            <div class="stat-label">Revenue Increase</div>
+                        </div>
+                        <div class="stat-card" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="stat-num" data-count="50">0<span>%</span></div>
+                            <div class="stat-label">Denial Reduction</div>
+                        </div>
+                        <div class="stat-card" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="stat-num" data-count="25">0<span>K+</span></div>
+                            <div class="stat-label">Hidden Revenue Found</div>
+                        </div>
+                        <div class="stat-card" data-aos="zoom-in" data-aos-delay="400">
+                            <div class="stat-num" data-count="150">0<span>+</span></div>
+                            <div class="stat-label">Happy Clients</div>
+                        </div>
+                    </div>
+                    <a href="about.html" class="discover-btn" style="margin-top:24px;display:inline-block;">Discover
+                        More</a>
+                </div>
+                <div class="why-right" data-aos="fade-left">
+                    <div class="globe-icon"><i class="fas fa-globe-americas"></i></div>
+                    <h3>Global Medical Billing Network</h3>
+                    <p>Connecting Providers Nationwide</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SPECIALTIES -->
+    <section class="specialties" data-aos="fade-up">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">EXPERTISE</div>
+                <h2>Our Specialties</h2>
+            </div>
+            <div class="specialties-grid">
+                <div class="specialty-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="specialty-icon"><i class="fas fa-female"></i></div>
+                    <h4>Obstetrics &amp; Gynecology</h4>
+                    <p>Comprehensive women's health care, from prenatal to postnatal support.</p>
+                </div>
+                <div class="specialty-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="specialty-icon"><i class="fas fa-stethoscope"></i></div>
+                    <h4>Family Medicine</h4>
+                    <p>Comprehensive healthcare for all ages, focusing on preventive care and wellness.</p>
+                </div>
+                <div class="specialty-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="specialty-icon"><i class="fas fa-wheelchair"></i></div>
+                    <h4>DME &amp; Medical Supplies</h4>
+                    <p>Durable medical equipment and essential supplies to support patient care.</p>
+                </div>
+                <div class="specialty-card" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="specialty-icon"><i class="fas fa-brain"></i></div>
+                    <h4>Community/Behavioral Health</h4>
+                    <p>Promoting mental wellness and supporting behavioral health challenges.</p>
+                </div>
+                <div class="specialty-card" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="specialty-icon"><i class="fas fa-head-side-brain"></i></div>
+                    <h4>Psych/Mental Health</h4>
+                    <p>Specialized care for those dealing with mental health challenges.</p>
+                </div>
+                <div class="specialty-card" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="specialty-icon"><i class="fas fa-eye"></i></div>
+                    <h4>Ophthalmology Surgery</h4>
+                    <p>Expert care for various eye conditions with advanced surgical techniques.</p>
+                </div>
+            </div>
+            <div class="specialties-center">
+                <a href="about.html" class="btn-primary">View All Specialties</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FREE AUDIT CTA -->
+    <section class="audit-cta" data-aos="fade-up">
+        <div class="container audit-cta-grid">
+            <div class="audit-cta-inner">
+                <div class="audit-label" style="color: white; opacity: 0.8;">LIMITED TIME OFFER</div>
+                <h2 style="color: white; text-align: left;">Get Your FREE Billing Audit Today</h2>
+                <p class="subtitle" style="color: white; opacity: 0.9; text-align: left;">Discover how much revenue
+                    you're leaving on the
+                    table</p>
+                <div class="audit-points" style="color: white; margin: 30px 0;">
+                    <div class="audit-point"><i class="fas fa-check-circle" style="color: white;"></i> Identify
+                        $10K-$25K in
+                        potential missed revenue</div>
+                    <div class="audit-point"><i class="fas fa-check-circle" style="color: white;"></i> Get detailed
+                        denial
+                        rate analysis</div>
+                    <div class="audit-point"><i class="fas fa-check-circle" style="color: white;"></i> Receive
+                        actionable
+                        improvement recommendations</div>
+                    <div class="audit-point"><i class="fas fa-check-circle" style="color: white;"></i> 100% free, no
+                        strings
+                        attached</div>
+                </div>
+                <a href="contact.html" class="btn-cta-premium">Request Free Audit</a>
+            </div>
+            <div class="audit-cta-image" data-aos="fade-left">
+                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=80" alt="Billing Audit"
+                    class="section-image" style="width:100%; border-radius:20px; object-fit:cover; max-height:400px;">
+            </div>
+        </div>
+    </section>
+
+  
+
+    <!-- FAQ -->
+    <section class="faq" data-aos="fade-up">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">COMMON QUESTIONS</div>
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-q" onclick="toggleFaq(this)">
+                        How much can I expect my collections to increase?
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-a">Our clients typically see a 7–15% increase in collections within the first 90
+                        days. By catching missed charges, reworking denied claims, and optimizing your coding, we
+                        recover revenue that was previously slipping through the cracks.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" onclick="toggleFaq(this)">
+                        How does the free billing audit work?
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-a">Our billing experts analyze your recent claims, identify missed charges,
+                        calculate your current denial rate, and provide a detailed report showing exactly how much more
+                        you could be collecting — completely free with no obligation.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" onclick="toggleFaq(this)">
+                        Do you replace our current billing staff?
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-a">Not at all. We partner with your existing team. Many practices use us to
+                        supplement their in-house staff, while others fully outsource. We adapt to your workflow and
+                        needs.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" onclick="toggleFaq(this)">
+                        How do you ensure HIPAA compliance?
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-a">We follow strict HIPAA protocols across all systems and processes. Our staff is
+                        regularly trained on the latest compliance requirements, and we use secure, encrypted systems
+                        for all data handling and transmission.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOTTOM CTA -->
+    <section class="bottom-cta" data-aos="fade-up">
+        <div class="container">
+            <h2 style="color: white;">Seeking Help with Medical Billing?</h2>
+            <p style="color: white; opacity: 0.9;">Contact us for all questions and inquiries. We will be proud to
+                assist you.</p>
+            <a href="contact.html" class="btn-cta-premium">Get in Touch</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div>
+                <a href="index.html" class="footer-logo">
+                    <div class="footer-logo-icon"><i class="fas fa-heartbeat"></i></div>
+                    <div class="footer-logo-text">
+                        <span>Cure Claim</span>
+                        <span>Solutions</span>
+                    </div>
+                </a>
+                <p class="footer-desc">We specialize in providing comprehensive medical billing services tailored to
+                    meet the unique needs of healthcare providers.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Useful Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services/medical-billing.html">Services</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="blog/billing-mistakes.html">Our Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="services/medical-billing.html">Medical Billing</a></li>
+                    <li><a href="services/medical-coding.html">Medical Coding</a></li>
+                    <li><a href="services/claim-approval.html">Claim Approval</a></li>
+                    <li><a href="services/medical-audit.html">Medical Audit</a></li>
+                    <li><a href="services/eligibility-verification.html">Eligibility Verification</a></li>
+                    <li><a href="services/superbill-submission.html">Super-Bill Submission</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Weekly Newsletter</h4>
+                <p style="color:rgba(255,255,255,0.5);font-size:13px;line-height:1.6;">Subscribe to stay updated on the
+                    latest healthcare billing and coding news.</p>
+                <form id="newsletter-form" class="newsletter-input">
+                    <input type="email" name="email" placeholder="Your Email Address" required>
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 | Cure Claim Solutions | All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- TOAST -->
+    <div class="toast" id="toast"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabase.js"></script>
+    <script src="js/forms.js"></script>
+
+    <!-- AOS and Swiper JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <script>
+        function toggleFaq(btn) {
+            const answer = btn.nextElementSibling;
+            const icon = btn.querySelector('.faq-icon');
+            const isOpen = answer.classList.contains('open');
+            document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('open'));
+            document.querySelectorAll('.faq-q').forEach(q => q.classList.remove('active'));
+            document.querySelectorAll('.faq-icon').forEach(i => i.classList.remove('rotate'));
+            if (!isOpen) {
+                answer.classList.add('open');
+                btn.classList.add('active');
+                icon.classList.add('rotate');
+            }
+        }
+
+        // Auth state check
+        window.addEventListener('load', async () => {
+            try {
+                if (typeof supabaseClient !== 'undefined') {
+                    const { data: { session } } = await supabaseClient.auth.getSession();
+                    if (session) {
+                        document.getElementById('auth-logged-out').style.display = 'none';
+                        document.getElementById('auth-logged-in').style.display = 'flex';
+                        const name = session.user.user_metadata?.full_name || session.user.email;
+                        document.getElementById('user-initial').textContent = name.charAt(0).toUpperCase();
+                    }
+                }
+            } catch (e) { }
+        });
+    </script>
+</body>
+
+</html>

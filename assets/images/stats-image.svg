@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
+    <defs>
+        <linearGradient id="statsBg" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#204066;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#1a3555;stop-opacity:1" />
+        </linearGradient>
+    </defs>
+    <rect width="600" height="600" fill="url(#statsBg)" rx="20"/>
+    <!-- Abstract global reach/network graphics -->
+    <circle cx="300" cy="300" r="120" fill="none" stroke="rgba(97, 206, 112, 0.3)" stroke-width="2"/>
+    <circle cx="300" cy="300" r="180" fill="none" stroke="rgba(18, 180, 139, 0.2)" stroke-width="2"/>
+    <circle cx="300" cy="300" r="240" fill="none" stroke="rgba(255, 255, 255, 0.1)" stroke-width="2"/>
+    
+    <circle cx="300" cy="180" r="6" fill="#61CE70"/>
+    <circle cx="420" cy="300" r="6" fill="#12B48B"/>
+    <circle cx="300" cy="420" r="6" fill="#ffffff"/>
+    <circle cx="180" cy="300" r="6" fill="#61CE70"/>
+    
+    <line x1="300" y1="180" x2="420" y2="300" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+    <line x1="420" y1="300" x2="300" y2="420" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+    <line x1="300" y1="420" x2="180" y2="300" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+    <line x1="180" y1="300" x2="300" y2="180" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+
+    <text x="300" y="320" text-anchor="middle" fill="rgba(255,255,255,0.9)" font-family="Poppins, sans-serif" font-size="24" font-weight="700">Global Reach</text>
+    <text x="300" y="550" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-family="Poppins, sans-serif" font-size="16" font-weight="500">Connecting Providers</text>
+</svg>

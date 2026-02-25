@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Editor – Cure Claim Solutions Admin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f1f5f9;
+            display: flex;
+            min-height: 100vh;
+            color: #1e293b
+        }
+
+        .sidebar {
+            width: 260px;
+            background: #1a2332;
+            min-height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s
+        }
+
+        .sidebar-logo {
+            padding: 1.75rem 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            display: flex;
+            align-items: center;
+            gap: 10px
+        }
+
+        .logo-icon-s {
+            width: 38px;
+            height: 38px;
+            background: linear-gradient(135deg, #00b894, #00cec9);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center
+        }
+
+        .logo-icon-s i {
+            color: #fff;
+            font-size: 1.1rem
+        }
+
+        .logo-text-s {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #fff;
+            line-height: 1.2
+        }
+
+        .logo-text-s span {
+            color: #00b894;
+            font-size: 0.75rem;
+            font-weight: 600;
+            display: block
+        }
+
+        .sidebar-nav {
+            flex: 1;
+            padding: 1rem 0
+        }
+
+        .sidebar-nav a {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 0.8rem 1.5rem;
+            color: rgba(255, 255, 255, 0.65);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.2s
+        }
+
+        .sidebar-nav a:hover {
+            background: rgba(0, 184, 148, 0.12);
+            color: #fff
+        }
+
+        .sidebar-nav a.active {
+            background: linear-gradient(90deg, rgba(0, 184, 148, 0.3), rgba(0, 184, 148, 0.1));
+            color: #00b894;
+            border-left: 3px solid #00b894
+        }
+
+        .sidebar-nav a i {
+            width: 20px;
+            text-align: center;
+        }
+
+        .sidebar-nav .nav-divider {
+            height: 1px;
+            background: rgba(255, 255, 255, 0.06);
+            margin: 0.5rem 1rem
+        }
+
+        .main {
+            margin-left: 260px;
+            flex: 1;
+            display: flex;
+            flex-direction: column
+        }
+
+        .top-header {
+            background: #fff;
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+            position: sticky;
+            top: 0;
+            z-index: 50
+        }
+
+        .top-header h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            flex: 1
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: #64748b;
+            font-size: 0.88rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.2s
+        }
+
+        .back-link:hover {
+            color: #00b894
+        }
+
+        .hamburger-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #1e293b;
+            font-size: 1.2rem
+        }
+
+        .content {
+            padding: 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+            width: 100%
+        }
+
+        .editor-card {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            padding: 2rem
+        }
+
+        .form-field {
+            margin-bottom: 1.5rem
+        }
+
+        .form-field label {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 0.4rem
+        }
+
+        .form-field input,
+        .form-field select,
+        .form-field textarea {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 1.5px solid #e5e7eb;
+            border-radius: 10px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.93rem;
+            color: #1e293b;
+            outline: none;
+            transition: border-color 0.2s
+        }
+
+        .form-field input:focus,
+        .form-field select:focus,
+        .form-field textarea:focus {
+            border-color: #00b894;
+            box-shadow: 0 0 0 3px rgba(0, 184, 148, 0.1)
+        }
+
+        .form-field textarea {
+            resize: vertical
+        }
+
+        .form-field input.title-input {
+            font-size: 1.2rem;
+            font-weight: 700;
+            font-family: 'Poppins', sans-serif
+        }
+
+        .content-area {
+            min-height: 400px;
+            line-height: 1.8
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.25rem
+        }
+
+        .char-count {
+            font-size: 0.78rem;
+            color: #94a3b8;
+            font-weight: 400
+        }
+
+        .slug-hint {
+            font-size: 0.78rem;
+            color: #94a3b8;
+            margin-top: 4px
+        }
+
+        /* STATUS TOGGLE */
+        .status-toggle {
+            display: flex;
+            gap: 1rem
+        }
+
+        .status-toggle label {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #374151;
+            cursor: pointer
+        }
+
+        .status-toggle input[type="radio"] {
+            accent-color: #00b894
+        }
+
+        /* ACTION BUTTONS */
+        .action-bar {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding-top: 1.5rem;
+            border-top: 1px solid #f1f5f9;
+            margin-top: 0.5rem;
+            flex-wrap: wrap
+        }
+
+        .btn-draft {
+            padding: 0.75rem 1.5rem;
+            background: #f8fafc;
+            border: 1.5px solid #e5e7eb;
+            border-radius: 10px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: #64748b;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 7px
+        }
+
+        .btn-draft:hover {
+            border-color: #00b894;
+            color: #00b894
+        }
+
+        .btn-publish {
+            padding: 0.75rem 1.75rem;
+            background: linear-gradient(135deg, #00b894, #00cec9);
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.25s;
+            display: inline-flex;
+            align-items: center;
+            gap: 7px
+        }
+
+        .btn-publish:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 184, 148, 0.35)
+        }
+
+        .btn-publish:disabled,
+        .btn-draft:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none
+        }
+
+        .toast {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: linear-gradient(135deg, #00b894, #00cec9);
+            color: #fff;
+            padding: 12px 20px;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            box-shadow: 0 8px 24px rgba(0, 184, 148, 0.35);
+            transform: translateX(200%);
+            transition: transform 0.4s;
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            gap: 8px
+        }
+
+        .toast.show {
+            transform: translateX(0)
+        }
+
+        @media(max-width:768px) {
+            .sidebar {
+                transform: translateX(-100%)
+            }
+
+            .sidebar.open {
+                transform: translateX(0)
+            }
+
+            .main {
+                margin-left: 0
+            }
+
+            .hamburger-btn {
+                display: block
+            }
+
+            .form-row {
+                grid-template-columns: 1fr
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-logo">
+            <div class="logo-icon-s"><i class="fas fa-heartbeat"></i></div>
+            <div class="logo-text-s">Cure Claim<span>Admin Panel</span></div>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="dashboard.html"><i class="fas fa-chart-line"></i> Dashboard</a>
+            <a href="leads.html"><i class="fas fa-users"></i> Leads</a>
+            <a href="contacts.html"><i class="fas fa-envelope"></i> Contacts</a>
+            <a href="audits.html"><i class="fas fa-search"></i> Audit Requests</a>
+            <a href="appointments.html"><i class="fas fa-calendar"></i> Appointments</a>
+            <div class="nav-divider"></div>
+            <a href="blog.html" class="active"><i class="fas fa-blog"></i> Blog Posts</a>
+            <a href="newsletter.html"><i class="fas fa-paper-plane"></i> Newsletter</a>
+            <div class="nav-divider"></div>
+            <a href="#" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </nav>
+    </aside>
+    <div class="main">
+        <header class="top-header">
+            <button class="hamburger-btn" id="hamburgerBtn"><i class="fas fa-bars"></i></button>
+            <h1 id="pageTitle">New Blog Post</h1>
+            <a href="blog.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Posts</a>
+        </header>
+        <div class="content">
+            <div class="editor-card">
+                <div class="form-field">
+                    <label>Title</label>
+                    <input type="text" id="postTitle" class="title-input" placeholder="Enter post title…">
+                </div>
+                <div class="form-field">
+                    <label>Slug <small style="font-size:0.78rem;color:#94a3b8;font-weight:400">(auto-generated,
+                            editable)</small></label>
+                    <input type="text" id="postSlug" placeholder="post-url-slug">
+                    <p class="slug-hint">URL: /blog/<span id="slugPreview">your-slug</span></p>
+                </div>
+                <div class="form-row">
+                    <div class="form-field">
+                        <label>Category</label>
+                        <select id="postCategory">
+                            <option value="">Select category…</option>
+                            <option value="Business">Business</option>
+                            <option value="Medical">Medical</option>
+                            <option value="Technology">Technology</option>
+                            <option value="Tips">Tips</option>
+                        </select>
+                    </div>
+                    <div class="form-field">
+                        <label>Featured Image URL</label>
+                        <input type="url" id="postImage" placeholder="https://…">
+                    </div>
+                </div>
+                <div class="form-field">
+                    <label>Excerpt <span class="char-count" id="excerptCount">0 / 150</span></label>
+                    <textarea id="postExcerpt" rows="3" placeholder="Brief description shown in listings…"
+                        maxlength="150"></textarea>
+                </div>
+                <div class="form-field">
+                    <label>Content</label>
+                    <textarea id="postContent" class="content-area" rows="18"
+                        placeholder="Write your blog post content here…"></textarea>
+                </div>
+                <div class="form-field">
+                    <label>Status</label>
+                    <div class="status-toggle">
+                        <label><input type="radio" name="status" value="draft" checked> Draft</label>
+                        <label><input type="radio" name="status" value="published"> Published</label>
+                    </div>
+                </div>
+                <div class="action-bar">
+                    <button class="btn-draft" id="saveDraft"><i class="fas fa-save"></i> Save as Draft</button>
+                    <button class="btn-publish" id="savePublish"><i class="fas fa-globe"></i> Publish Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="toast" id="toast"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../js/supabase.js"></script>
+    <script>
+        let postId = null;
+
+        function showToast(msg, ok = true) {
+            const t = document.getElementById('toast');
+            t.innerHTML = `<i class="fas ${ok ? 'fa-check-circle' : 'fa-exclamation-circle'}"></i> ${msg}`;
+            t.style.background = ok ? 'linear-gradient(135deg,#00b894,#00cec9)' : 'linear-gradient(135deg,#e74c3c,#c0392b)';
+            t.classList.add('show');
+            setTimeout(() => t.classList.remove('show'), 3500);
+        }
+
+        function slugify(s) { return s.toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-').replace(/--+/g, '-').trim(); }
+
+        // Auto-slug from title
+        document.getElementById('postTitle').addEventListener('input', function () {
+            if (!postId) {
+                const slug = slugify(this.value);
+                document.getElementById('postSlug').value = slug;
+                document.getElementById('slugPreview').textContent = slug || 'your-slug';
+            }
+        });
+        document.getElementById('postSlug').addEventListener('input', function () {
+            document.getElementById('slugPreview').textContent = this.value || 'your-slug';
+        });
+        document.getElementById('postExcerpt').addEventListener('input', function () {
+            document.getElementById('excerptCount').textContent = `${this.value.length} / 150`;
+        });
+
+        (async () => {
+            const { data: { session } } = await supabaseClient.auth.getSession();
+            if (!session) { window.location.href = 'login.html'; return; }
+            document.getElementById('logoutBtn').addEventListener('click', async () => { await supabaseClient.auth.signOut(); window.location.href = 'login.html'; });
+            document.getElementById('hamburgerBtn').addEventListener('click', () => document.getElementById('sidebar').classList.toggle('open'));
+
+            // Load existing post if ?id=
+            const params = new URLSearchParams(window.location.search);
+            postId = params.get('id');
+            if (postId) {
+                document.getElementById('pageTitle').textContent = 'Edit Blog Post';
+                const { data: post } = await supabaseClient.from('blog_posts').select('*').eq('id', postId).single();
+                if (post) {
+                    document.getElementById('postTitle').value = post.title || '';
+                    document.getElementById('postSlug').value = post.slug || '';
+                    document.getElementById('slugPreview').textContent = post.slug || '';
+                    document.getElementById('postCategory').value = post.category || '';
+                    document.getElementById('postImage').value = post.featured_image || '';
+                    document.getElementById('postExcerpt').value = post.excerpt || '';
+                    document.getElementById('postExcerpt').dispatchEvent(new Event('input'));
+                    document.getElementById('postContent').value = post.content || '';
+                    document.querySelector(`input[name="status"][value="${post.status || 'draft'}"]`).checked = true;
+                }
+            }
+
+            async function save(forceStatus) {
+                const status = forceStatus || document.querySelector('input[name="status"]:checked').value;
+                const payload = {
+                    title: document.getElementById('postTitle').value.trim(),
+                    slug: document.getElementById('postSlug').value.trim() || slugify(document.getElementById('postTitle').value),
+                    category: document.getElementById('postCategory').value,
+                    featured_image: document.getElementById('postImage').value.trim() || null,
+                    excerpt: document.getElementById('postExcerpt').value.trim(),
+                    content: document.getElementById('postContent').value.trim(),
+                    status,
+                    author: session.user.email,
+                };
+                if (!payload.title) { showToast('Please enter a title.', false); return; }
+                if (status === 'published') payload.published_at = new Date().toISOString();
+
+                let error;
+                if (postId) {
+                    ({ error } = await supabaseClient.from('blog_posts').update(payload).eq('id', postId));
+                } else {
+                    const { data, error: e } = await supabaseClient.from('blog_posts').insert([payload]).select().single();
+                    error = e; if (data) { postId = data.id; history.replaceState({}, '', `?id=${postId}`); }
+                }
+                if (error) { showToast('Error: ' + error.message, false); }
+                else { showToast(status === 'published' ? 'Post published!' : 'Saved as draft.'); }
+            }
+
+            document.getElementById('saveDraft').addEventListener('click', () => save('draft'));
+            document.getElementById('savePublish').addEventListener('click', () => save('published'));
+        })();
+    </script>
+</body>
+
+</html>

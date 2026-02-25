@@ -1,0 +1,779 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Contact Cure Claim Solutions for medical billing help. Call +1 989 796 4434, email us, or request a free billing audit. We respond within 24 hours.">
+    <meta name="keywords"
+        content="contact cure claim solutions, medical billing contact, free billing audit, medical billing consultation">
+    <meta name="author" content="Cure Claim Solutions LLC">
+    <title>Contact Us | Cure Claim Solutions — Get a Free Billing Audit</title>
+    <link rel="icon" type="image/jpeg" href="assets/images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        :root {
+            --green: #00b894;
+            --teal: #00cec9;
+            --navy: #1a2332;
+            --navy2: #1e3a5f;
+        }
+
+        /* PAGE HERO */
+        .page-hero {
+            position: relative;
+            background: linear-gradient(135deg, #00b894, #00cec9);
+            padding: 5rem 0 0;
+            overflow: hidden;
+        }
+
+        .page-hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, .08);
+            z-index: 1;
+        }
+
+        .page-hero-particles {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .page-hero-inner {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding-bottom: 5rem;
+            color: #fff;
+        }
+
+        .breadcrumb {
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
+            font-size: .9rem;
+            color: rgba(255, 255, 255, .85);
+            margin-bottom: 1.25rem;
+        }
+
+        .breadcrumb a {
+            color: rgba(255, 255, 255, .85);
+        }
+
+        .breadcrumb a:hover {
+            color: #fff;
+        }
+
+        .breadcrumb .sep {
+            color: rgba(255, 255, 255, .6);
+            font-size: .75rem;
+        }
+
+        .breadcrumb .current {
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .page-hero h1 {
+            color: #fff;
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: .75rem;
+            line-height: 1.2;
+        }
+
+        .page-hero .page-subtitle {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, .9);
+            max-width: 540px;
+            margin: 0 auto;
+        }
+
+        .page-hero-wave {
+            position: relative;
+            bottom: -1px;
+            width: 100%;
+            line-height: 0;
+        }
+
+        .page-hero-wave svg {
+            display: block;
+            width: 100%;
+            height: 5rem;
+        }
+
+        /* CONTACT SECTION */
+        .contact-section {
+            padding: 5rem 0;
+            background: #fff;
+        }
+
+        .contact-inner {
+            display: grid;
+            grid-template-columns: 1fr 1.3fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        /* Info Column */
+        .contact-info h2 {
+            font-size: 1.9rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .contact-info>p {
+            color: #64748b;
+            line-height: 1.85;
+            margin-bottom: 2rem;
+        }
+
+        .contact-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.25rem;
+            background: #f8fffe;
+            border-radius: 12px;
+            border: 1px solid rgba(0, 184, 148, .12);
+            transition: all .3s;
+        }
+
+        .contact-card:hover {
+            border-color: rgba(0, 184, 148, .3);
+            box-shadow: 0 6px 20px rgba(0, 184, 148, .1);
+        }
+
+        .cc-icon {
+            width: 3rem;
+            height: 3rem;
+            min-width: 3rem;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #00b894, #00cec9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 1.1rem;
+            box-shadow: 0 6px 16px rgba(0, 184, 148, .3);
+        }
+
+        .cc-text h4 {
+            font-family: 'Poppins', sans-serif;
+            font-size: .95rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: .2rem;
+        }
+
+        .cc-text p {
+            font-size: .9rem;
+            color: #1e293b;
+            font-weight: 600;
+            margin-bottom: .15rem;
+        }
+
+        .cc-text span {
+            font-size: .82rem;
+            color: #64748b;
+        }
+
+        .contact-socials {
+            display: flex;
+            gap: .75rem;
+        }
+
+        .contact-socials a {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            background: #f1f5f9;
+            color: #64748b;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: .9rem;
+            transition: all .3s;
+        }
+
+        .contact-socials a:hover {
+            background: #00b894;
+            color: #fff;
+            transform: translateY(-3px);
+        }
+
+        /* Form Column */
+        .contact-form-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, .1);
+            border: 1px solid rgba(0, 0, 0, .06);
+        }
+
+        .contact-form-card h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 1.75rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .form-field {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1rem;
+        }
+
+        .form-field label {
+            font-size: .84rem;
+            font-weight: 600;
+            color: #374151;
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: .4rem;
+        }
+
+        .form-field input,
+        .form-field select,
+        .form-field textarea {
+            padding: .75rem 1rem;
+            border: 1.5px solid #e5e7eb;
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            font-size: .9rem;
+            color: #1e293b;
+            background: #fff;
+            transition: all .3s;
+            outline: none;
+            width: 100%;
+        }
+
+        .form-field input:focus,
+        .form-field select:focus,
+        .form-field textarea:focus {
+            border-color: #00b894;
+            box-shadow: 0 0 0 3px rgba(0, 184, 148, .1);
+        }
+
+        .form-field textarea {
+            resize: vertical;
+            min-height: 110px;
+        }
+
+        .form-check {
+            display: flex;
+            align-items: flex-start;
+            gap: .75rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-check input[type=checkbox] {
+            width: 1.1rem;
+            height: 1.1rem;
+            min-width: 1.1rem;
+            margin-top: .15rem;
+            accent-color: #00b894;
+            cursor: pointer;
+        }
+
+        .form-check label {
+            font-size: .85rem;
+            color: #64748b;
+            line-height: 1.6;
+            cursor: pointer;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(135deg, #00b894, #00cec9);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all .35s;
+            letter-spacing: .3px;
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 184, 148, .35);
+            filter: brightness(1.05);
+        }
+
+        .form-security {
+            text-align: center;
+            margin-top: 1rem;
+            font-size: .82rem;
+            color: #94a3b8;
+        }
+
+        .form-security i {
+            color: #00b894;
+            margin-right: .3rem;
+        }
+
+        /* FREE AUDIT CTA */
+        .audit-cta {
+            padding: 5rem 0;
+            background: #f1f5f9;
+            text-align: center;
+        }
+
+        .audit-label {
+            display: inline-block;
+            font-family: 'Poppins', sans-serif;
+            font-size: .78rem;
+            font-weight: 700;
+            color: #00b894;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: .75rem;
+        }
+
+        .audit-cta h2 {
+            font-size: 2.1rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: .75rem;
+        }
+
+        .audit-cta>.container>p {
+            color: #64748b;
+            max-width: 520px;
+            margin: 0 auto 2.5rem;
+            line-height: 1.85;
+        }
+
+        .audit-checkpoints {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: .85rem;
+            max-width: 480px;
+            margin: 0 auto 2.5rem;
+            text-align: left;
+        }
+
+        .audit-check {
+            display: flex;
+            align-items: center;
+            gap: .75rem;
+        }
+
+        .audit-check i {
+            color: #00b894;
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+
+        .audit-check span {
+            font-size: .9rem;
+            color: #374151;
+            font-weight: 500;
+        }
+
+        .btn-audit {
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
+            padding: 1rem 2.5rem;
+            background: linear-gradient(135deg, #00b894, #00cec9);
+            color: #fff;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            transition: all .35s;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .btn-audit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 184, 148, .35);
+        }
+
+        /* FAQ */
+        .faq-contact {
+            padding: 5rem 0;
+            background: #fff;
+        }
+
+        .faq-contact .section-label {
+            display: block;
+            font-family: 'Poppins', sans-serif;
+            font-size: .78rem;
+            font-weight: 700;
+            color: #00b894;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: .75rem;
+        }
+
+        .faq-contact h2 {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 3rem;
+        }
+
+        .faq-list {
+            max-width: 760px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .faq-item {
+            border: 1.5px solid #e5e7eb;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: border-color .3s;
+        }
+
+        .faq-item.open {
+            border-color: #00b894;
+        }
+
+        .faq-question {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.25rem 1.5rem;
+            background: #fff;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #1e293b;
+            cursor: pointer;
+            border: none;
+            text-align: left;
+            gap: 1rem;
+        }
+
+        .faq-question i {
+            font-size: .85rem;
+            color: #00b894;
+            transition: transform .3s;
+            flex-shrink: 0;
+        }
+
+        .faq-item.open .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 0 1.5rem 1.25rem;
+            color: #64748b;
+            line-height: 1.85;
+            font-size: .94rem;
+        }
+
+        .faq-item.open .faq-answer {
+            display: block;
+        }
+
+        /* RESPONSIVE */
+        @media(max-width:992px) {
+            .contact-inner {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+
+            .page-hero h1 {
+                font-size: 2.1rem;
+            }
+        }
+
+        @media(max-width:640px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .audit-checkpoints {
+                grid-template-columns: 1fr;
+            }
+
+            .page-hero h1 {
+                font-size: 1.7rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <div class="container top-bar-inner">
+            <div class="top-bar-left">
+                <a href="tel:+19897964434"><i class="fas fa-phone-alt"></i> +1 989 796 4434</a>
+                <a href="mailto:info@cureclaimsolutionsllc.com"><i class="fas fa-envelope"></i>
+                    info@cureclaimsolutionsllc.com</a>
+            </div>
+            <div class="top-bar-right">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="mainNavbar">
+        <div class="nav-inner">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.png" alt="Cure Claim Solutions Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="#">Our Services <i class="fas fa-chevron-down" style="font-size:10px;"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="services/credentialing.html">Credentialing & Enrollment</a>
+                        <a href="services/medical-billing.html">Medical Billing Services</a>
+                        <a href="services/medical-audit.html">Medical Audit Service</a>
+                        <a href="services/claim-approval.html">Claim Approval</a>
+                        <a href="services/eligibility-verification.html">Eligibility Verification</a>
+                        <a href="services/superbill-submission.html">Super-Bill Submission</a>
+                        <a href="services/medical-coding.html">Medical Coding Services</a>
+                    </div>
+                </li>
+                <li><a href="blog/billing-mistakes.html">Our Blog</a></li>
+                <li><a href="contact.html" class="active">Contact Us</a></li>
+            </ul>
+            <div class="nav-auth">
+                <div id="auth-logged-out" style="display:flex;gap:8px;align-items:center;">
+                    <a href="auth/login.html" class="btn-login">Login</a>
+                    <a href="auth/signup.html" class="btn-signup">Sign Up</a>
+                </div>
+                <div id="auth-logged-in" style="display:none;">
+                    <a href="auth/profile.html" class="btn-myaccount">
+                        <div class="avatar-circle" id="user-initial">A</div>
+                        My Account
+                    </a>
+                </div>
+                <a href="contact.html" class="btn-cta">Talk to An Expert</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <div class="page-hero-overlay"></div>
+        <div class="page-hero-particles" id="pageParticles"></div>
+        <div class="container page-hero-inner">
+            <nav class="breadcrumb" aria-label="breadcrumb">
+                <a href="index.html">Home</a>
+                <span class="sep"><i class="fas fa-chevron-right"></i></span>
+                <span class="current">Contact Us</span>
+            </nav>
+            <h1>Get In Touch With Us</h1>
+            <p class="page-subtitle">We're here to help. Reach out and our team will respond within 24 hours.</p>
+        </div>
+        <div class="page-hero-wave">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path
+                    d="M0,64L48,69.3C96,75,192,85,288,80C384,75,480,53,576,48C672,43,768,53,864,64C960,75,1056,85,1152,80C1248,75,1344,53,1392,42.7L1440,32L1440,120L0,120Z"
+                    fill="#ffffff" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- CONTACT INFO + FORM -->
+    <section class="contact-section">
+        <div class="container contact-inner">
+            <div class="contact-info">
+                <h2>Let's Talk About Your Practice</h2>
+                <p>Whether you have questions about our services, want to schedule a free audit, or are ready to get
+                    started — we'd love to hear from you.</p>
+                <div class="contact-cards">
+                    <div class="contact-card">
+                        <div class="cc-icon"><i class="fas fa-phone-alt"></i></div>
+                        <div class="cc-text">
+                            <h4>Call Us</h4>
+                            <p>+1 989 796 4434</p>
+                            <span>Mon–Fri, 9AM–6PM EST</span>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="cc-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="cc-text">
+                            <h4>Email Us</h4>
+                            <p>info@cureclaimsolutionsllc.com</p>
+                            <span>We reply within 24 hours</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-socials">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="contact-form-card">
+                <h3>Send Us a Message</h3>
+                <form id="contact-form" novalidate>
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="cf-name">Full Name</label>
+                            <input type="text" id="cf-name" placeholder="Dr. Jane Smith" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="cf-phone">Phone Number</label>
+                            <input type="tel" id="cf-phone" placeholder="+1 (555) 000-0000" required>
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <label for="cf-email">Email Address</label>
+                        <input type="email" id="cf-email" placeholder="you@yourpractice.com" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="cf-service">Service Interested In</label>
+                        <select id="cf-service" required>
+                            <option value="" disabled selected>Select a service…</option>
+                            <option>Medical Billing</option>
+                            <option>Claim Approval</option>
+                            <option>Medical Coding</option>
+                            <option>Medical Audit</option>
+                            <option>Eligibility Verification</option>
+                            <option>Super-Bill Submission</option>
+                            <option>Credentialing & Enrollment</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="form-field">
+                        <label for="cf-message">Message</label>
+                        <textarea id="cf-message" rows="4"
+                            placeholder="Tell us about your practice and how we can help…" required></textarea>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" id="cf-consent" required>
+                        <label for="cf-consent">I agree to receive communications from Cure Claim Solutions</label>
+                    </div>
+                    <button type="submit" class="btn-submit">Send Message &rarr;</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div>
+                <a href="index.html" class="footer-logo">
+                    <img src="assets/images/logo.png" alt="Cure Claim Solutions Logo" style="height: 50px;">
+                </a>
+                <p class="footer-desc">We specialize in providing comprehensive medical billing services tailored to
+                    meet the unique needs of healthcare providers.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Useful Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services/medical-billing.html">Services</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="blog/billing-mistakes.html">Our Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="services/medical-billing.html">Medical Billing</a></li>
+                    <li><a href="services/medical-coding.html">Medical Coding</a></li>
+                    <li><a href="services/claim-approval.html">Claim Approval</a></li>
+                    <li><a href="services/medical-audit.html">Medical Audit</a></li>
+                    <li><a href="services/eligibility-verification.html">Eligibility Verification</a></li>
+                    <li><a href="services/superbill-submission.html">Super-Bill Submission</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Weekly Newsletter</h4>
+                <p style="color:rgba(255,255,255,0.5);font-size:13px;line-height:1.6;">Subscribe to stay updated on the
+                    latest healthcare billing and coding news.</p>
+                <form id="newsletter-form" class="newsletter-input">
+                    <input type="email" name="email" placeholder="Your Email Address" required>
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 | Cure Claim Solutions | All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabase.js"></script>
+    <script src="js/forms.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        // Particles
+        (function () {
+            var c = document.getElementById('pageParticles');
+            if (!c) return;
+            for (var i = 0; i < 18; i++) {
+                var p = document.createElement('div');
+                p.style.cssText = 'position:absolute;border-radius:50%;background:rgba(255,255,255,' + (Math.random() * .15 + .05) + ');width:' + (Math.random() * 5 + 3) + 'px;height:' + (Math.random() * 5 + 3) + 'px;left:' + (Math.random() * 100) + '%;animation:particleFloat ' + (Math.random() * 10 + 10) + 's ' + (Math.random() * 5) + 's infinite linear;';
+                c.appendChild(p);
+            }
+        })();
+
+        // FAQ simple toggle if any on this page
+        document.querySelectorAll('.faq-item').forEach(function (item) {
+            item.querySelector('.faq-question').addEventListener('click', function () {
+                var open = item.classList.contains('open');
+                document.querySelectorAll('.faq-item').forEach(function (i) { i.classList.remove('open'); });
+                if (!open) item.classList.add('open');
+            });
+        });
+    </script>
+</body>
+
+</html>

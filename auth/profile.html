@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account | Cure Claim Solutions</title>
+    <link rel="icon" type="image/jpeg" href="../assets/images/logo.png">
+    <meta name="description"
+        content="Manage your Cure Claim Solutions account, view your submissions and quick actions.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .profile-hero {
+            background: linear-gradient(135deg, #00b894, #00cec9);
+            padding: 4rem 0 7rem;
+            position: relative;
+            overflow: hidden;
+            text-align: center
+        }
+
+        .profile-hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            background: #f1f5f9;
+            clip-path: ellipse(55% 100% at 50% 100%)
+        }
+
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            animation: pf 12s infinite linear
+        }
+
+        @keyframes pf {
+            0% {
+                transform: translateY(100%);
+                opacity: 0
+            }
+
+            10% {
+                opacity: 1
+            }
+
+            90% {
+                opacity: 1
+            }
+
+            100% {
+                transform: translateY(-200px);
+                opacity: 0
+            }
+        }
+
+        .profile-wrap {
+            background: #f1f5f9;
+            padding: 0 0 5rem
+        }
+
+        .profile-card {
+            background: #fff;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+            padding: 2.5rem;
+            max-width: 800px;
+            margin: -4rem auto 2rem;
+            position: relative;
+            z-index: 10
+        }
+
+        .profile-header {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #f1f5f9;
+            flex-wrap: wrap
+        }
+
+        .avatar {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #00b894, #00cec9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #fff;
+            flex-shrink: 0
+        }
+
+        .user-info {
+            flex: 1
+        }
+
+        .user-info h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 0.2rem
+        }
+
+        .user-info p {
+            color: #64748b;
+            font-size: 0.9rem
+        }
+
+        .btn-logout {
+            padding: 0.6rem 1.25rem;
+            background: #fef2f2;
+            border: 1.5px solid #fecaca;
+            color: #dc2626;
+            border-radius: 10px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.88rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 6px
+        }
+
+        .btn-logout:hover {
+            background: #dc2626;
+            color: #fff;
+            border-color: #dc2626
+        }
+
+        .info-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-bottom: 2rem
+        }
+
+        .info-card {
+            background: #f8fafc;
+            border-radius: 14px;
+            padding: 1.25rem;
+            text-align: center;
+            border: 1px solid #f1f5f9
+        }
+
+        .info-card i {
+            font-size: 1.5rem;
+            color: #00b894;
+            margin-bottom: 0.5rem;
+            display: block
+        }
+
+        .info-card h4 {
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.3rem
+        }
+
+        .info-card p {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #1e293b
+        }
+
+        .section-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px
+        }
+
+        .section-title i {
+            color: #00b894
+        }
+
+        .actions-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-bottom: 2rem
+        }
+
+        .action-btn {
+            padding: 0.85rem 1rem;
+            border-radius: 12px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.88rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-align: center;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px
+        }
+
+        .action-btn.primary {
+            background: linear-gradient(135deg, #00b894, #00cec9);
+            color: #fff;
+            border: none
+        }
+
+        .action-btn.primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 184, 148, 0.3)
+        }
+
+        .action-btn.outline {
+            background: #fff;
+            border: 1.5px solid #00b894;
+            color: #00b894
+        }
+
+        .action-btn.outline:hover {
+            background: #f0fdf9
+        }
+
+        .submissions-area {
+            margin-top: 1.5rem
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse
+        }
+
+        th {
+            padding: 0.7rem 1rem;
+            text-align: left;
+            font-size: 0.77rem;
+            font-weight: 600;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            background: #f8fafc
+        }
+
+        td {
+            padding: 0.85rem 1rem;
+            font-size: 0.87rem;
+            color: #374151;
+            border-top: 1px solid #f1f5f9
+        }
+
+        tr:hover td {
+            background: #f8fafc
+        }
+
+        .badge-status {
+            display: inline-flex;
+            padding: 0.2rem 0.6rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600
+        }
+
+        .badge-new {
+            background: #eff6ff;
+            color: #1d4ed8
+        }
+
+        .badge-replied {
+            background: #f0fdf4;
+            color: #16a34a
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 2.5rem;
+            color: #94a3b8
+        }
+
+        .empty-state i {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            display: block
+        }
+
+        .loading-state {
+            text-align: center;
+            padding: 2rem;
+            color: #94a3b8
+        }
+
+        @media(max-width:640px) {
+
+            .info-cards,
+            .actions-grid {
+                grid-template-columns: 1fr 1fr
+            }
+
+            .actions-grid {
+                grid-template-columns: 1fr
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <div class="container top-bar-inner">
+            <div class="top-bar-left">
+                <a href="tel:+19897964434"><i class="fas fa-phone-alt"></i> +1 989 796 4434</a>
+                <a href="mailto:info@cureclaimsolutionsllc.com"><i class="fas fa-envelope"></i>
+                    info@cureclaimsolutionsllc.com</a>
+            </div>
+            <div class="top-bar-right">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="mainNavbar">
+        <div class="nav-inner">
+            <a href="../index.html" class="logo">
+                <img src="../assets/images/logo.png" alt="Cure Claim Solutions Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="#">Our Services <i class="fas fa-chevron-down" style="font-size:10px;"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="../services/credentialing.html">Credentialing & Enrollment</a>
+                        <a href="../services/medical-billing.html">Medical Billing Services</a>
+                        <a href="../services/medical-audit.html">Medical Audit Service</a>
+                        <a href="../services/claim-approval.html">Claim Approval</a>
+                        <a href="../services/eligibility-verification.html">Eligibility Verification</a>
+                        <a href="../services/superbill-submission.html">Super-Bill Submission</a>
+                        <a href="../services/medical-coding.html">Medical Coding Services</a>
+                    </div>
+                </li>
+                <li><a href="../blog/billing-mistakes.html">Our Blog</a></li>
+                <li><a href="../contact.html">Contact Us</a></li>
+            </ul>
+            <div class="nav-auth">
+                <div id="auth-logged-out" style="display:none;gap:8px;align-items:center;">
+                    <a href="login.html" class="btn-login">Login</a>
+                    <a href="signup.html" class="btn-signup">Sign Up</a>
+                </div>
+                <div id="auth-logged-in" style="display:flex;">
+                    <a href="profile.html" class="btn-myaccount active">
+                        <div class="avatar-circle" id="user-initial">A</div>
+                        My Account
+                    </a>
+                </div>
+                <a href="../contact.html" class="btn-cta">Talk to An Expert</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <div class="profile-hero">
+        <div class="particle" style="width:8px;height:8px;left:10%;animation-delay:0s"></div>
+        <div class="particle" style="width:5px;height:5px;left:60%;animation-delay:3s"></div>
+        <div class="particle" style="width:6px;height:6px;left:85%;animation-delay:1.5s"></div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="profile-wrap">
+        <div class="container">
+            <div class="profile-card" id="profileCard">
+                <div class="loading-state"><i class="fas fa-spinner fa-spin"
+                        style="font-size:2rem;margin-bottom:0.5rem;display:block;color:#00b894"></i>Loading your
+                    profile...</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div>
+                <a href="../index.html" class="footer-logo">
+                    <img src="../assets/images/logo.png" alt="Cure Claim Solutions Logo" style="height: 50px;">
+                </a>
+                <p class="footer-desc">We specialize in providing comprehensive medical billing services tailored to
+                    meet the unique needs of healthcare providers.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Useful Links</h4>
+                <ul>
+                    <li><a href="../about.html">About Us</a></li>
+                    <li><a href="../services/medical-billing.html">Services</a></li>
+                    <li><a href="../contact.html">Contact Us</a></li>
+                    <li><a href="../blog/billing-mistakes.html">Our Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="../services/medical-billing.html">Medical Billing</a></li>
+                    <li><a href="../services/medical-coding.html">Medical Coding</a></li>
+                    <li><a href="../services/claim-approval.html">Claim Approval</a></li>
+                    <li><a href="../services/medical-audit.html">Medical Audit</a></li>
+                    <li><a href="../services/eligibility-verification.html">Eligibility Verification</a></li>
+                    <li><a href="../services/superbill-submission.html">Super-Bill Submission</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Weekly Newsletter</h4>
+                <p style="color:rgba(255,255,255,0.5);font-size:13px;line-height:1.6;">Subscribe to stay updated on the
+                    latest healthcare billing and coding news.</p>
+                <form id="newsletter-form" class="newsletter-input">
+                    <input type="email" name="email" placeholder="Your Email Address" required>
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 | Cure Claim Solutions | All rights reserved.</p>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+    <script src="../js/script.js"></script>
+
+    <!-- Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../js/supabase.js"></script>
+    <script>
+        (async () => {
+            if (typeof supabaseClient === 'undefined') return;
+            const { data: { session } } = await supabaseClient.auth.getSession();
+            if (!session) { window.location.href = 'login.html'; return; }
+            const { data: { user } } = await supabaseClient.auth.getUser();
+            const meta = user.user_metadata || {};
+            const fullName = meta.full_name || user.email.split('@')[0];
+            const initials = fullName.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2);
+            const memberSince = new Date(user.created_at).toLocaleDateString('en-US', { year: 'numeric', month: 'long' });
+
+            // Load submissions
+            let submissionsHtml = '';
+            try {
+                const { data } = await supabaseClient.from('contact_submissions').select('*').eq('email', user.email).order('created_at', { ascending: false }).limit(10);
+                if (!data || !data.length) {
+                    submissionsHtml = '<div class="empty-state"><i class="fas fa-inbox"></i><p>No submissions yet. Contact us to get started!</p></div>';
+                } else {
+                    submissionsHtml = `<div style="overflow-x:auto"><table><thead><tr><th>Date</th><th>Service</th><th>Message</th><th>Status</th></tr></thead><tbody>${data.map(r => `<tr>
+                <td>${new Date(r.created_at).toLocaleDateString()}</td>
+                <td>${r.service || '—'}</td>
+                <td style="max-width:200px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${r.message || '—'}</td>
+                <td><span class="badge-status ${r.replied ? 'badge-replied' : 'badge-new'}">${r.replied ? 'Replied' : 'New'}</span></td>
+            </tr>`).join('')}</tbody></table></div>`;
+                }
+            } catch (err) {
+                submissionsHtml = '<div class="empty-state"><i class="fas fa-inbox"></i><p>No submissions yet. Contact us to get started!</p></div>';
+            }
+
+            const profileCard = document.getElementById('profileCard');
+            if (profileCard) {
+                profileCard.innerHTML = `
+                    <div class="profile-header">
+                        <div class="avatar">${initials}</div>
+                        <div class="user-info">
+                            <h2>Welcome back, ${fullName}!</h2>
+                            <p>${user.email}</p>
+                        </div>
+                        <button class="btn-logout" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</button>
+                    </div>
+                    <div class="info-cards">
+                        <div class="info-card"><i class="fas fa-building"></i><h4>My Practice</h4><p>${meta.practice_name || 'Not set'}</p></div>
+                        <div class="info-card"><i class="fas fa-stethoscope"></i><h4>Specialty</h4><p>${meta.specialty || 'Not set'}</p></div>
+                        <div class="info-card"><i class="fas fa-calendar-check"></i><h4>Member Since</h4><p>${memberSince}</p></div>
+                    </div>
+                    <p class="section-title"><i class="fas fa-bolt"></i> Quick Actions</p>
+                    <div class="actions-grid">
+                        <a href="../services/medical-audit.html" class="action-btn primary"><i class="fas fa-search-dollar"></i> Request Free Audit</a>
+                        <a href="../contact.html" class="action-btn primary"><i class="fas fa-calendar-plus"></i> Book Consultation</a>
+                        <a href="../services/medical-billing.html" class="action-btn outline"><i class="fas fa-list-ul"></i> Our Services</a>
+                    </div>
+                    <div class="submissions-area">
+                        <p class="section-title"><i class="fas fa-paper-plane"></i> My Submissions</p>
+                        ${submissionsHtml}
+                    </div>
+                `;
+
+                const logoutBtn = document.getElementById('logoutBtn');
+                if (logoutBtn) {
+                    logoutBtn.addEventListener('click', async () => {
+                        await supabaseClient.auth.signOut();
+                        window.location.href = '../index.html';
+                    });
+                }
+            }
+        })();
+    </script>
+</body>
+
+</html>

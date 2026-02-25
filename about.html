@@ -1,0 +1,1146 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Learn about Cure Claim Solutions — 10+ years of excellence in medical billing. Meet our U.S.-based team of CPC, CCS, and RHIT certified professionals serving 150+ practices nationwide.">
+    <meta name="keywords"
+        content="about cure claim solutions, medical billing company, certified billing specialists, HIPAA compliant, CPC certified coders, revenue cycle management">
+    <meta name="author" content="Cure Claim Solutions LLC">
+    <title>About Us | Cure Claim Solutions — 10+ Years of Medical Billing Excellence</title>
+    <link rel="icon" type="image/jpeg" href="assets/images/logo.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* ===== ABOUT PAGE SPECIFIC STYLES ===== */
+
+        /* Page Hero */
+        .page-hero {
+            position: relative;
+            background: linear-gradient(135deg, #00b894, #00cec9);
+            padding: 5rem 0 0 0;
+            overflow: hidden;
+        }
+
+        .page-hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.08);
+            z-index: 1;
+        }
+
+        .page-hero-particles {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .page-hero-inner {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding-bottom: 5rem;
+            color: #fff;
+        }
+
+        .breadcrumb {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            font-family: var(--font-secondary);
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 1.25rem;
+        }
+
+        .breadcrumb a {
+            color: rgba(255, 255, 255, 0.85);
+            transition: color 0.3s;
+        }
+
+        .breadcrumb a:hover {
+            color: #fff;
+        }
+
+        .breadcrumb .sep {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.8rem;
+        }
+
+        .breadcrumb .current {
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .page-hero h1 {
+            color: #fff;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .page-hero .page-subtitle {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .page-hero-wave {
+            position: relative;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            z-index: 3;
+            line-height: 0;
+        }
+
+        .page-hero-wave svg {
+            display: block;
+            width: 100%;
+            height: 5rem;
+        }
+
+        /* ===== ABOUT STORY SECTION ===== */
+        .about-story {
+            padding: 5rem 0;
+            background: #fff;
+        }
+
+        .about-story-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        /* Image placeholder card */
+        .story-image-card {
+            background: linear-gradient(135deg, #00b894, #00cec9);
+            border-radius: 16px;
+            min-height: 420px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 20px 60px rgba(0, 184, 148, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .story-image-card::before {
+            content: '';
+            position: absolute;
+            top: -40px;
+            right: -40px;
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 50%;
+        }
+
+        .story-image-card::after {
+            content: '';
+            position: absolute;
+            bottom: -60px;
+            left: -40px;
+            width: 250px;
+            height: 250px;
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 50%;
+        }
+
+        .story-image-icon {
+            font-size: 5rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 1.25rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .story-image-label {
+            font-family: var(--font-primary);
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.9);
+            position: relative;
+            z-index: 1;
+        }
+
+        .story-badge-float {
+            position: absolute;
+            top: 1.5rem;
+            right: -1rem;
+            background: #fff;
+            color: #00b894;
+            padding: 0.7rem 1.2rem;
+            border-radius: 10px;
+            font-family: var(--font-primary);
+            font-weight: 700;
+            font-size: 0.85rem;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            z-index: 5;
+            animation: badgeFloat 3s ease-in-out infinite;
+        }
+
+        @keyframes badgeFloat {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-6px);
+            }
+        }
+
+        /* Story content */
+        .story-content .section-label {
+            display: inline-block;
+            font-family: var(--font-primary);
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #00b894;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 0.75rem;
+        }
+
+        .story-content h2 {
+            font-size: 2.1rem;
+            font-weight: 700;
+            line-height: 1.3;
+            color: var(--text-dark);
+            margin-bottom: 1.25rem;
+        }
+
+        .story-content p {
+            color: var(--text-body);
+            line-height: 1.85;
+            margin-bottom: 1.25rem;
+        }
+
+        .story-stats-row {
+            display: flex;
+            gap: 1.5rem;
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: #f8fffe;
+            border-radius: 12px;
+            border: 1px solid rgba(0, 184, 148, 0.15);
+        }
+
+        .story-stat {
+            text-align: center;
+            flex: 1;
+        }
+
+        .story-stat-num {
+            display: block;
+            font-family: var(--font-primary);
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #00b894;
+            line-height: 1;
+            margin-bottom: 0.3rem;
+        }
+
+        .story-stat-label {
+            font-size: 0.78rem;
+            color: var(--text-gray);
+            font-weight: 500;
+            line-height: 1.4;
+        }
+
+        .story-stat+.story-stat {
+            border-left: 1px solid rgba(0, 184, 148, 0.2);
+        }
+
+        /* ===== MISSION & VALUES SECTION ===== */
+        .values-section {
+            padding: 5rem 0;
+            background: #f1f5f9;
+        }
+
+        .values-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .values-header .section-label {
+            display: block;
+            font-family: var(--font-primary);
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #00b894;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 0.75rem;
+        }
+
+        .values-header h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .value-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+            text-align: center;
+            transition: all 0.35s ease;
+            border: 1px solid transparent;
+        }
+
+        .value-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 40px rgba(0, 184, 148, 0.15);
+            border-color: rgba(0, 184, 148, 0.2);
+        }
+
+        .value-icon {
+            width: 4rem;
+            height: 4rem;
+            background: linear-gradient(135deg, #00b894, #00cec9);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 1.5rem;
+            color: #fff;
+            box-shadow: 0 8px 20px rgba(0, 184, 148, 0.3);
+        }
+
+        .value-card h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 0.75rem;
+        }
+
+        .value-card p {
+            color: var(--text-gray);
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
+        /* ===== WHY CHOOSE US SECTION ===== */
+        .why-choose {
+            padding: 5rem 0;
+            background: #fff;
+        }
+
+        .why-choose-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .why-choose-left h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 2rem;
+            line-height: 1.3;
+        }
+
+        .checklist {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .check-icon {
+            width: 2rem;
+            height: 2rem;
+            min-width: 2rem;
+            background: linear-gradient(135deg, #00b894, #00cec9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 0.75rem;
+            box-shadow: 0 4px 12px rgba(0, 184, 148, 0.35);
+        }
+
+        .checklist-item span {
+            font-size: 0.97rem;
+            color: var(--text-dark);
+            font-weight: 500;
+            padding-top: 0.25rem;
+            line-height: 1.6;
+        }
+
+        /* Stats Card */
+        .stats-card {
+            background: #1a2332;
+            border-radius: 20px;
+            padding: 2.5rem;
+            color: #fff;
+            box-shadow: 0 20px 60px rgba(26, 35, 50, 0.3);
+        }
+
+        .stats-card-title {
+            font-family: var(--font-primary);
+            font-size: 1rem;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.7);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .stats-card-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .stat-box {
+            text-align: center;
+            padding: 1.5rem 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .stat-box:hover {
+            background: rgba(0, 184, 148, 0.1);
+            border-color: rgba(0, 184, 148, 0.3);
+        }
+
+        .stat-number {
+            display: block;
+            font-family: var(--font-primary);
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #00b894;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.83rem;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.4;
+        }
+
+        /* ===== TEAM SECTION ===== */
+        .team-section {
+            padding: 5rem 0;
+            background: #f1f5f9;
+        }
+
+        .team-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .team-header .section-label {
+            display: block;
+            font-family: var(--font-primary);
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #00b894;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 0.75rem;
+        }
+
+        .team-header h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .team-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+            transition: all 0.35s ease;
+            border: 1px solid transparent;
+        }
+
+        .team-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 40px rgba(0, 184, 148, 0.15);
+            border-color: rgba(0, 184, 148, 0.2);
+        }
+
+        .team-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #00b894, #00cec9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2.5rem;
+            color: #fff;
+            box-shadow: 0 8px 24px rgba(0, 184, 148, 0.35);
+            font-family: var(--font-primary);
+            font-weight: 700;
+        }
+
+        .team-card h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 0.35rem;
+        }
+
+        .team-role {
+            font-size: 0.9rem;
+            color: #00b894;
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+        }
+
+        .team-cert {
+            display: inline-block;
+            font-size: 0.78rem;
+            background: rgba(0, 184, 148, 0.1);
+            color: #00b894;
+            padding: 0.2rem 0.75rem;
+            border-radius: 20px;
+            font-weight: 600;
+            margin-bottom: 1.25rem;
+        }
+
+        .team-linkedin {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.2rem;
+            height: 2.2rem;
+            background: #0077b5;
+            border-radius: 50%;
+            color: #fff;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+        }
+
+        .team-linkedin:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(0, 119, 181, 0.4);
+        }
+
+        /* ===== CTA BANNER ===== */
+        .about-cta-banner {
+            padding: 5rem 0;
+            background: #1e3a5f;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-cta-banner::before {
+            content: '';
+            position: absolute;
+            top: -80px;
+            right: -80px;
+            width: 300px;
+            height: 300px;
+            background: rgba(0, 184, 148, 0.1);
+            border-radius: 50%;
+        }
+
+        .about-cta-banner::after {
+            content: '';
+            position: absolute;
+            bottom: -100px;
+            left: -80px;
+            width: 350px;
+            height: 350px;
+            background: rgba(0, 206, 201, 0.08);
+            border-radius: 50%;
+        }
+
+        .about-cta-inner {
+            position: relative;
+            z-index: 1;
+        }
+
+        .about-cta-banner h2 {
+            color: #fff;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .about-cta-banner p {
+            color: rgba(255, 255, 255, 0.78);
+            font-size: 1.05rem;
+            max-width: 540px;
+            margin: 0 auto 2.5rem;
+            line-height: 1.8;
+        }
+
+        .about-cta-buttons {
+            display: flex;
+            gap: 1.25rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-outline-white {
+            background: transparent;
+            border: 2px solid #fff;
+            color: #fff;
+            padding: 0.85rem 2rem;
+            border-radius: 6px;
+            font-family: var(--font-primary);
+            font-size: 0.9375rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-outline-white:hover {
+            background: #fff;
+            color: #1e3a5f;
+            transform: translateY(-2px);
+        }
+
+        .btn-solid-white {
+            background: #fff;
+            border: 2px solid #fff;
+            color: #1e3a5f;
+            padding: 0.85rem 2rem;
+            border-radius: 6px;
+            font-family: var(--font-primary);
+            font-size: 0.9375rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-solid-white:hover {
+            background: #f0faf8;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 992px) {
+
+            .about-story-inner,
+            .why-choose-inner {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+
+            .values-grid,
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .page-hero h1 {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+
+            .values-grid,
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-card-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .story-stats-row {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .story-stat+.story-stat {
+                border-left: none;
+                border-top: 1px solid rgba(0, 184, 148, 0.2);
+                padding-top: 1rem;
+            }
+
+            .page-hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .about-cta-banner h2 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <div class="container top-bar-inner">
+            <div class="top-bar-left">
+                <a href="tel:+19897964434"><i class="fas fa-phone-alt"></i> +1 989 796 4434</a>
+                <a href="mailto:info@cureclaimsolutionsllc.com"><i class="fas fa-envelope"></i>
+                    info@cureclaimsolutionsllc.com</a>
+            </div>
+            <div class="top-bar-right">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="mainNavbar">
+        <div class="nav-inner">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.png" alt="Cure Claim Solutions Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
+                <li class="dropdown">
+                    <a href="#">Our Services <i class="fas fa-chevron-down" style="font-size:10px;"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="services/credentialing.html">Credentialing & Enrollment</a>
+                        <a href="services/medical-billing.html">Medical Billing Services</a>
+                        <a href="services/medical-audit.html">Medical Audit Service</a>
+                        <a href="services/claim-approval.html">Claim Approval</a>
+                        <a href="services/eligibility-verification.html">Eligibility Verification</a>
+                        <a href="services/superbill-submission.html">Super-Bill Submission</a>
+                        <a href="services/medical-coding.html">Medical Coding Services</a>
+                    </div>
+                </li>
+                <li><a href="blog/billing-mistakes.html">Our Blog</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <div class="nav-auth">
+                <div id="auth-logged-out" style="display:flex;gap:8px;align-items:center;">
+                    <a href="auth/login.html" class="btn-login">Login</a>
+                    <a href="auth/signup.html" class="btn-signup">Sign Up</a>
+                </div>
+                <div id="auth-logged-in" style="display:none;">
+                    <a href="auth/profile.html" class="btn-myaccount">
+                        <div class="avatar-circle" id="user-initial">A</div>
+                        My Account
+                    </a>
+                </div>
+                <a href="contact.html" class="btn-cta">Talk to An Expert</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== PAGE HERO ===== -->
+    <section class="page-hero">
+        <div class="page-hero-overlay"></div>
+        <div class="page-hero-particles" id="pageParticles"></div>
+        <div class="container page-hero-inner">
+            <nav class="breadcrumb" aria-label="breadcrumb">
+                <a href="index.html">Home</a>
+                <span class="sep"><i class="fas fa-chevron-right"></i></span>
+                <span class="current">About Us</span>
+            </nav>
+            <h1 class="animate-slide-up">About Cure Claim Solutions</h1>
+            <p class="page-subtitle animate-slide-up">10+ Years of Excellence in Medical Billing</p>
+        </div>
+        <div class="page-hero-wave">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path
+                    d="M0,64L48,69.3C96,75,192,85,288,80C384,75,480,53,576,48C672,43,768,53,864,64C960,75,1056,85,1152,80C1248,75,1344,53,1392,42.7L1440,32L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z"
+                    fill="#ffffff" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT STORY SECTION ===== -->
+    <section class="about-story" id="our-story">
+        <div class="container about-story-inner">
+            <!-- Left: Image Card -->
+            <div style="position: relative;">
+                <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=600&q=80"
+                    alt="Our Medical Billing Team"
+                    style="width:100%; height:450px; object-fit:cover; border-radius:20px; box-shadow: 0 20px 60px rgba(0,0,0,0.15);">
+
+                <div class="story-badge-float">
+                    <i class="fas fa-award" style="margin-right: 0.4rem;"></i> 10+ Years of Trust
+                </div>
+            </div>
+
+            <!-- Right: Story Content -->
+            <div class="story-content">
+                <span class="section-label">OUR STORY</span>
+                <h2>Dedicated to Maximizing Your Practice Revenue</h2>
+                <p>Founded over a decade ago, Cure Claim Solutions was built with one mission: to help healthcare
+                    providers focus on what matters most — their patients. We saw practices losing thousands of
+                    dollars
+                    monthly due to billing errors, denied claims, and inefficient processes. That's why we assembled
+                    a
+                    team of certified billing experts, coders, and compliance specialists committed to recovering
+                    every
+                    dollar you've earned.</p>
+                <p>Today we proudly serve <strong>150+ practices</strong> across the United States, delivering
+                    consistent results with a U.S.-based team of <strong>CPC, CCS, and RHIT certified
+                        professionals</strong>.</p>
+
+                <!-- Stats Row -->
+                <div class="story-stats-row">
+                    <div class="story-stat">
+                        <span class="story-stat-num">10+</span>
+                        <span class="story-stat-label">Years Experience</span>
+                    </div>
+                    <div class="story-stat">
+                        <span class="story-stat-num">150+</span>
+                        <span class="story-stat-label">Happy Clients</span>
+                    </div>
+                    <div class="story-stat">
+                        <span class="story-stat-num">$25K+</span>
+                        <span class="story-stat-label">Hidden Revenue Found</span>
+                    </div>
+                </div>
+
+                <a href="contact.html" class="btn btn-primary"
+                    style="background: linear-gradient(135deg, #00b894, #00cec9); border: none;">
+                    Request Free Audit <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MISSION & VALUES SECTION ===== -->
+    <section class="values-section" id="our-values">
+        <div class="container">
+            <div class="values-header">
+                <span class="section-label">OUR VALUES</span>
+                <h2>What Drives Everything We Do</h2>
+            </div>
+            <div class="values-grid">
+                <!-- Card 1 -->
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Integrity First</h3>
+                    <p>We operate with complete transparency. No hidden fees, no long-term contracts, no surprises.
+                        What we promise, we deliver—every single time.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Results Driven</h3>
+                    <p>Every decision we make is focused on maximizing your collections and minimizing your denials.
+                        Our clients see results within 90 days, guaranteed.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Patient-Centered</h3>
+                    <p>We free up your team's time so you can deliver exceptional care to every patient. When you
+                        thrive, your patients thrive.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WHY CHOOSE US SECTION ===== -->
+    <section class="why-choose" id="why-choose-us">
+        <div class="container why-choose-inner">
+            <!-- Left: Checklist -->
+            <div class="why-choose-left">
+                <span class="section-label"
+                    style="display:inline-block; font-family: var(--font-primary); font-size: 0.8rem; font-weight: 700; color: #00b894; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 0.75rem;">WHY
+                    CHOOSE US</span>
+                <h2>Built for Healthcare Providers. Proven by Results.</h2>
+                <div class="checklist">
+                    <div class="checklist-item">
+                        <div class="check-icon"><i class="fas fa-check"></i></div>
+                        <span>U.S. Based Team &amp; CPC/CCS/RHIT Certified Coders</span>
+                    </div>
+                    <div class="checklist-item">
+                        <div class="check-icon"><i class="fas fa-check"></i></div>
+                        <span>HIPAA Compliant with 100% Secure Data Protocols</span>
+                    </div>
+                    <div class="checklist-item">
+                        <div class="check-icon"><i class="fas fa-check"></i></div>
+                        <span>No Long-Term Contracts — Cancel Anytime</span>
+                    </div>
+                    <div class="checklist-item">
+                        <div class="check-icon"><i class="fas fa-check"></i></div>
+                        <span>Dedicated Account Manager for Your Practice</span>
+                    </div>
+                    <div class="checklist-item">
+                        <div class="check-icon"><i class="fas fa-check"></i></div>
+                        <span>Real-Time Reporting via Secure 24/7 Portal</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Stats Card -->
+            <div class="stats-card">
+                <p class="stats-card-title">Our Performance at a Glance</p>
+                <div class="stats-card-grid">
+                    <div class="stat-box">
+                        <span class="stat-number">15%</span>
+                        <span class="stat-label">Revenue Increase</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">50%</span>
+                        <span class="stat-label">Denial Reduction</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">$25K+</span>
+                        <span class="stat-label">Hidden Revenue Found</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">150+</span>
+                        <span class="stat-label">Happy Clients</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TEAM SECTION ===== -->
+    <section class="team-section" id="our-team">
+        <div class="container">
+            <div class="team-header">
+                <span class="section-label">OUR TEAM</span>
+                <h2>Meet Our Expert Billing Professionals</h2>
+            </div>
+            <div class="team-grid">
+                <!-- Card 1 -->
+                <div class="team-card">
+                    <div class="team-avatar">SJ</div>
+                    <h3>Sarah Johnson</h3>
+                    <p class="team-role">Lead Billing Specialist</p>
+                    <span class="team-cert">CPC Certified</span><br>
+                    <a href="#" class="team-linkedin" aria-label="Sarah Johnson LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+                <!-- Card 2 -->
+                <div class="team-card">
+                    <div class="team-avatar">MC</div>
+                    <h3>Michael Chen</h3>
+                    <p class="team-role">Coding Director</p>
+                    <span class="team-cert">CCS, RHIT Certified</span><br>
+                    <a href="#" class="team-linkedin" aria-label="Michael Chen LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+                <!-- Card 3 -->
+                <div class="team-card">
+                    <div class="team-avatar">ER</div>
+                    <h3>Emily Rodriguez</h3>
+                    <p class="team-role">Compliance Manager</p>
+                    <span class="team-cert">HIPAA Expert</span><br>
+                    <a href="#" class="team-linkedin" aria-label="Emily Rodriguez LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA BANNER ===== -->
+    <section class="about-cta-banner" id="about-cta">
+        <div class="container about-cta-inner">
+            <h2>Ready to Increase Your Collections?</h2>
+            <p>Join 150+ practices that trust Cure Claim Solutions for their medical billing needs.</p>
+            <div class="about-cta-buttons">
+                <a href="services/medical-billing.html" class="btn-outline-white">
+                    <i class="fas fa-list"></i> Learn About Our Services
+                </a>
+                <a href="contact.html" class="btn-solid-white">
+                    <i class="fas fa-search-dollar"></i> Get Free Audit
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div>
+                <a href="index.html" class="footer-logo">
+                    <img src="assets/images/logo.png" alt="Cure Claim Solutions Logo" style="height: 50px;">
+                </a>
+                <p class="footer-desc">We specialize in providing comprehensive medical billing services tailored to
+                    meet the unique needs of healthcare providers.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Useful Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services/medical-billing.html">Services</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="blog/billing-mistakes.html">Our Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="services/medical-billing.html">Medical Billing</a></li>
+                    <li><a href="services/medical-coding.html">Medical Coding</a></li>
+                    <li><a href="services/claim-approval.html">Claim Approval</a></li>
+                    <li><a href="services/medical-audit.html">Medical Audit</a></li>
+                    <li><a href="services/eligibility-verification.html">Eligibility Verification</a></li>
+                    <li><a href="services/superbill-submission.html">Super-Bill Submission</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Weekly Newsletter</h4>
+                <p style="color:rgba(255,255,255,0.5);font-size:13px;line-height:1.6;">Subscribe to stay updated on the
+                    latest healthcare billing and coding news.</p>
+                <form id="newsletter-form" class="newsletter-input">
+                    <input type="email" name="email" placeholder="Your Email Address" required>
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 | Cure Claim Solutions | All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Main Script -->
+    <script src="js/script.js"></script>
+
+    <script>
+        // Particle animation for page hero
+        (function () {
+            const container = document.getElementById('pageParticles');
+            if (!container) return;
+            for (let i = 0; i < 20; i++) {
+                const p = document.createElement('div');
+                p.style.cssText = `
+                    position: absolute;
+                    width: ${Math.random() * 5 + 3}px;
+                    height: ${Math.random() * 5 + 3}px;
+                    background: rgba(255,255,255,${Math.random() * 0.15 + 0.05});
+                    border-radius: 50%;
+                    left: ${Math.random() * 100}%;
+                    animation: particleFloat ${Math.random() * 10 + 10}s ${Math.random() * 5}s infinite linear;
+                `;
+                container.appendChild(p);
+            }
+        })();
+
+        // Animating About Us nav link as active in dropdown
+        document.querySelectorAll('.nav-links > a').forEach(link => {
+            if (link.getAttribute('href') === 'about.html') {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+    </script>
+
+    <!-- Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabase.js"></script>
+    <script src="js/forms.js"></script>
+
+
+    <!-- Navbar Auth State -->
+    <script>
+        (function () {
+            if (typeof supabaseClient === 'undefined') return;
+            function updateNavAuth(session) {
+                var loginBtn = document.getElementById('navLoginBtn');
+                var signupBtn = document.getElementById('navSignupBtn');
+                var accountBtn = document.getElementById('navAccountBtn');
+                var avatar = document.getElementById('navAvatar');
+                if (!loginBtn) return;
+                if (session && session.user) {
+                    loginBtn.style.display = 'none';
+                    signupBtn.style.display = 'none';
+                    accountBtn.style.display = 'flex';
+                    var name = (session.user.user_metadata && session.user.user_metadata.full_name) || session.user.email || '?';
+                    var initials = name.split(' ').map(function (n) { return n[0]; }).join('').toUpperCase().slice(0, 2) || '?';
+                    if (avatar) avatar.textContent = initials;
+                } else {
+                    loginBtn.style.display = '';
+                    signupBtn.style.display = '';
+                    accountBtn.style.display = 'none';
+                }
+            }
+            supabaseClient.auth.getSession().then(function (r) { updateNavAuth(r.data.session); });
+            supabaseClient.auth.onAuthStateChange(function (event, session) { updateNavAuth(session); });
+        })();
+    </script>
+</body>
+
+</html>

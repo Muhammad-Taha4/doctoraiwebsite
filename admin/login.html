@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login – Cure Claim Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #00b894 0%, #00cec9 50%, #0984e3 100%);
+            padding: 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .login-card {
+            background: #fff;
+            border-radius: 24px;
+            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 420px;
+            padding: 3rem 2.5rem;
+            position: relative;
+            z-index: 1;
+            animation: slideUp 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .logo-wrap {
+            text-align: center;
+            margin-bottom: 1.75rem;
+        }
+
+        .logo-icon-big {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, #00b894, #00cec9);
+            border-radius: 16px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 0.75rem;
+            box-shadow: 0 8px 24px rgba(0, 184, 148, 0.3);
+        }
+
+        .logo-icon-big i {
+            font-size: 1.75rem;
+            color: #fff;
+        }
+
+        .logo-text-big {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1e293b;
+            display: block;
+        }
+
+        .logo-text-big span {
+            color: #00b894;
+        }
+
+        .admin-subtitle {
+            color: #64748b;
+            font-size: 0.88rem;
+            margin-top: 0.25rem;
+        }
+
+        h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1e293b;
+            text-align: center;
+            margin-bottom: 0.25rem;
+        }
+
+        .hint {
+            color: #94a3b8;
+            font-size: 0.83rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .field {
+            margin-bottom: 1.25rem;
+        }
+
+        .field label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 0.4rem;
+        }
+
+        .input-wrap {
+            position: relative;
+        }
+
+        .input-wrap i.prefix {
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+
+        .input-wrap input {
+            width: 100%;
+            padding: 0.8rem 1rem 0.8rem 2.6rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 10px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.93rem;
+            color: #1e293b;
+            transition: border-color 0.25s, box-shadow 0.25s;
+            outline: none;
+        }
+
+        .input-wrap input:focus {
+            border-color: #00b894;
+            box-shadow: 0 0 0 3px rgba(0, 184, 148, 0.12);
+        }
+
+        .toggle-pw {
+            position: absolute;
+            right: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #94a3b8;
+            font-size: 0.9rem;
+            padding: 2px;
+            transition: color 0.2s;
+        }
+
+        .toggle-pw:hover {
+            color: #00b894;
+        }
+
+        .btn-login {
+            width: 100%;
+            padding: 0.9rem;
+            background: linear-gradient(135deg, #00b894, #00cec9);
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn-login:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(0, 184, 148, 0.4);
+        }
+
+        .btn-login:active {
+            transform: translateY(0);
+        }
+
+        .btn-login:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .error-msg {
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+            color: #dc2626;
+            border-radius: 8px;
+            padding: 0.75rem 1rem;
+            font-size: 0.87rem;
+            margin-top: 1rem;
+            display: none;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .error-msg.show {
+            display: flex;
+            animation: shake 0.4s ease;
+        }
+
+        @keyframes shake {
+
+            0%,
+            100% {
+                transform: translateX(0)
+            }
+
+            20% {
+                transform: translateX(-6px)
+            }
+
+            60% {
+                transform: translateX(6px)
+            }
+        }
+
+        .back-link {
+            text-align: center;
+            margin-top: 1.5rem;
+        }
+
+        .back-link a {
+            color: #94a3b8;
+            font-size: 0.83rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: color 0.2s;
+        }
+
+        .back-link a:hover {
+            color: #00b894;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-card">
+        <div class="logo-wrap">
+            <div class="logo-icon-big"><i class="fas fa-heartbeat"></i></div>
+            <span class="logo-text-big">Cure Claim<span>Solutions</span></span>
+            <p class="admin-subtitle">Admin Portal</p>
+        </div>
+        <h2>Welcome back</h2>
+        <p class="hint">Sign in to access your dashboard</p>
+
+        <form id="loginForm" novalidate>
+            <div class="field">
+                <label for="email">Email Address</label>
+                <div class="input-wrap">
+                    <i class="fas fa-envelope prefix"></i>
+                    <input type="email" id="email" placeholder="admin@example.com" required autocomplete="email">
+                </div>
+            </div>
+            <div class="field">
+                <label for="password">Password</label>
+                <div class="input-wrap">
+                    <i class="fas fa-lock prefix"></i>
+                    <input type="password" id="password" placeholder="••••••••" required
+                        autocomplete="current-password">
+                    <button type="button" class="toggle-pw" id="togglePw" aria-label="Show password">
+                        <i class="fas fa-eye" id="eyeIcon"></i>
+                    </button>
+                </div>
+            </div>
+            <button type="submit" class="btn-login" id="loginBtn">
+                <i class="fas fa-sign-in-alt"></i> Login to Dashboard
+            </button>
+            <div class="error-msg" id="errorMsg">
+                <i class="fas fa-exclamation-circle"></i>
+                <span id="errorText">Invalid credentials. Please try again.</span>
+            </div>
+        </form>
+
+        <div class="back-link">
+            <a href="../index.html"><i class="fas fa-arrow-left"></i> Back to Website</a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../js/supabase.js"></script>
+    <script>
+        // Redirect if already logged in
+        (async () => {
+            const { data: { session } } = await supabaseClient.auth.getSession();
+            if (session) window.location.href = 'dashboard.html';
+        })();
+
+        // Password toggle
+        document.getElementById('togglePw').addEventListener('click', () => {
+            const pw = document.getElementById('password');
+            const icon = document.getElementById('eyeIcon');
+            const isText = pw.type === 'text';
+            pw.type = isText ? 'password' : 'text';
+            icon.className = isText ? 'fas fa-eye' : 'fas fa-eye-slash';
+        });
+
+        // Login form
+        document.getElementById('loginForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const btn = document.getElementById('loginBtn');
+            const errorMsg = document.getElementById('errorMsg');
+            const errorText = document.getElementById('errorText');
+
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Signing in…';
+            btn.disabled = true;
+            errorMsg.classList.remove('show');
+
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value;
+
+            try {
+                const { data, error } = await supabaseClient.auth.signInWithPassword({ email, password });
+                if (error) throw error;
+                window.location.href = 'dashboard.html';
+            } catch (err) {
+                errorText.textContent = err.message || 'Invalid credentials. Please try again.';
+                errorMsg.classList.add('show');
+                btn.innerHTML = '<i class="fas fa-sign-in-alt"></i> Login to Dashboard';
+                btn.disabled = false;
+            }
+        });
+    </script>
+</body>
+
+</html>

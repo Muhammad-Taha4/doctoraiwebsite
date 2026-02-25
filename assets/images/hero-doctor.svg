@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+    <defs>
+        <linearGradient id="heroBg" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#1a6fc4;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#17a2b8;stop-opacity:1" />
+        </linearGradient>
+    </defs>
+    <rect width="500" height="500" fill="url(#heroBg)" rx="20"/>
+    <!-- Stethoscope-like shape -->
+    <circle cx="250" cy="200" r="80" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="8"/>
+    <circle cx="250" cy="200" r="40" fill="rgba(255,255,255,0.15)"/>
+    <path d="M170 200 L170 320 Q170 370 220 370 L280 370 Q330 370 330 320 L330 280" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="330" cy="260" r="15" fill="rgba(255,255,255,0.25)"/>
+    <!-- Heartbeat line -->
+    <path d="M100 400 L180 400 L210 350 L240 450 L270 380 L300 420 L330 400 L400 400" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Cross symbol -->
+    <rect x="230" y="170" width="40" height="60" rx="4" fill="rgba(255,255,255,0.3)"/>
+    <rect x="220" y="185" width="60" height="30" rx="4" fill="rgba(255,255,255,0.3)"/>
+    <text x="250" y="480" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-family="Poppins, sans-serif" font-size="16" font-weight="600">Medical Billing Experts</text>
+</svg>
